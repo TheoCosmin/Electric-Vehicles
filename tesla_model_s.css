@@ -1,0 +1,27 @@
+.background{
+    background: url(img/tesla_model_s/model-s2.jpg);
+}
+
+.upper{
+    background: url(img/tesla_model_s/model_s_exterior.png);
+}
+.upper.interior{
+    background: url(img/tesla_model_s/model_s_interior.jpg);
+}
+
+.specs-image{
+    background: url(img/tesla_model_s/specs-image.png);
+}
+
+
+
+@media(max-width: 766px){
+    .upper{
+        background: url(img/tesla_model_s//model_s_exterior_mobile.jpg);
+    }
+    .background{
+        background: url(img/tesla_model_s/model_s_mobile.jpg);
+    }
+}
+
+

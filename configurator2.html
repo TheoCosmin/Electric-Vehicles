@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Configurator</title>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="nav-footer.css">
+        <link rel="stylesheet" href="configurator2.css">
+    </head>
+    <body>
+        
+        <header>
+            <div class="logo">
+                <a href="index.html" class="logo-img"></a>
+                <a href="index.html">Electric Vehicles</a>
+            </div>
+            <nav class="min">
+                <ul>
+                    <li><a id='slide-1'class="active">1. Model</a></li>
+                    <li><a class="slide-2">2. Exterior</a></li>
+                    <li><a class="slide-3">3. Interoir</a></li>
+                    <li><a class="slide-4">4. Accesorii</a></li>
+                    <li><a class="slide-5">5. Plata</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle"><em class="fas fa-bars"></em></div>
+        </header>
+        
+
+
+
+
+        <section id="model" class="fullpage flex">
+            <div class="preview flex-74 flex flex-col-reverse">
+                <div class="overlay flex">
+                    <div class="overlay-size flex">
+                        <div class="element flex flex-col">
+                            <h2 id="autonomie">What is this?</h2>
+                            <p>Autonomie</p>
+                        </div>
+                        <hr>
+                        <div class="element flex flex-col">
+                            <h2 id="viteza_maxima">What is this?</h2>
+                            <p>Viteza Maxima</p>
+                        </div>
+                        <hr>
+                        <div class="element flex flex-col">
+                            <h2 id="acceleratie">What is this?</h2>
+                            <p>0-100 km/h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="selection flex-26 flex flex-col">
+                <h2>Selecteaza Modelul</h2>
+                <p id="model_subtitle">Oh Snap! This is not working... You may need a... server</p>
+                <div id="options" class="flex flex-col"></div>
+                <div id="selected_option_description">
+                    <ul id="description_elements">
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="exterior" class="hidden fullpage flex">
+            <div class="preview flex-74 flex"></div>
+            <div class="selection flex-26 flex flex-col">
+                <h2>Selecteaza Culoarea</h2>
+                <div id="culoare_aleasa" class="flex flex-col"></div>
+                <h2>Selecteaza Rotile</h2>
+                <div id="roti_alese" class="flex flex-col">
+                    <!-- <div class="flex">
+                        <div class="name flex">Pearl LULUE</div>
+                        <div class="pret flex">2200eur</div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="interior" class="hidden fullpage flex ">
+            <div class="interior_preview flex-74 flex"></div>
+            <div class="selection flex-26 flex flex-col">
+                <h2>Selecteaza Interiorul</h2>
+                <div id="interior_ales" class="flex flex-col"></div>
+            </div>
+        </section>
+
+
+
+
+
+        <section id="accesorii" class="hidden fullpage flex">
+            <button>HELLO4</button>
+        </section>
+
+
+
+
+        <section id="plata" class="hidden fullpage flex">
+
+        </section>
+
+
+        <script src="https://kit.fontawesome.com/133c9485b0.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/configurator2.js"></script>
+        
+    </body>
+</html>

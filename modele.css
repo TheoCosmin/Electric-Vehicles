@@ -1,0 +1,106 @@
+.promo{
+    height: 40vh;
+    display: flex;
+}
+.promo a{
+    flex: 1;
+    background: url(img/modele/Promo.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.three-col{
+    flex: 33%;
+}
+
+.deals{
+    display: flex;
+    flex-wrap: wrap;
+}
+.element{
+    height: 33vh;
+    display: flex;
+    flex-direction: column;
+    min-width: 465px;
+    position: relative;
+}
+.element .image{
+    flex: 80%
+}
+.element a.text{
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #13293D;
+}
+.element .image{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.element .image a{
+    /* min-width: 465px; */
+    width: 465px;
+    height: 185px;
+}
+.image a.image-one{
+    background: url(img/modele/Audi_e_tron_side.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.image a.image-two{
+    background: url(img/modele/Mazda_MX_30_side.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.image a.image-three{
+    background: url(img/modele/Tesla_model_S_side.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.image a.image-four{
+    background: url(img/modele/Dacia_spring_side.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.image a.image-five{
+    background: url(img/modele/Ford_mach_e_side.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.image a.image-six{
+    background: url(img/modele/Hyundai_kona_side.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.filler{
+    height: 15vh;
+}
+.element .in-curand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(img/modele/In-curand.png);
+    background-position: center;
+}
+
+
+
+
+@media(max-width:465px){
+    .element{
+        min-width: 320px;
+    }
+    .image a.image-cover{
+        background-size: cover;
+    }
+    .element{
+        height: 45vh;
+    }
+}

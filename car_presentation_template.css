@@ -1,0 +1,395 @@
+.notransition {
+    animation: none !important;
+    transition: none !important;
+}
+
+
+.landing{
+    height: calc(100vh - 50px);
+    position: relative;
+}
+.background{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    /* SET BACKGROUND IMAGE IN ANOTHER CSS FILE */
+}
+.car-model{
+    position: absolute;
+    /* make same width as parent("landing") to center it easily */
+    width: 100%;    
+    top:10%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 400;
+}
+h2.bold{
+    font-weight: bold;
+}
+.button-zone-center{
+    position: absolute;
+    left: 0;
+    top: 80%;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+.button{
+    width: 170px;
+    height: 40px;
+    border: solid 2px black;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.15rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    transition: .5s ease;
+}
+.button:hover{
+    background: black;
+    color: white;
+}
+
+.flex{
+    display: flex;
+}
+.flex-row-reverse{
+    flex-direction: row-reverse;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex_col_reverse{
+    flex-direction: column-reverse;
+}
+.flex_75{
+    flex: 75%;
+}
+.flex_25{
+    flex: 25%;
+}
+.flex_40{
+    flex: 40%;
+}
+.flex_60{
+    flex: 60%;
+}
+.flex_30{
+    flex: 30%;
+}
+.flex_70{
+    flex: 70%;
+}
+
+.fullheight{
+    height: 100vh;
+    display: flex;
+}
+
+.upper{
+    background-position: center;
+    background-size: cover;
+}
+.content{
+    display: flex;
+    /* not sure about this */
+    padding: 0 20%;
+    align-items: center;
+}
+
+.banner-header h2{
+    font-size: 17px;
+    color: black;
+}
+.banner-subheader h1{
+    font-size: 28px;
+    font-weight: 500;
+}
+.content-description p{
+    font-size: 14px;
+    padding-left: 15px;
+    text-align: justify;
+}
+.button.mobile{
+    display: none;
+}
+.overlay{
+    padding: 0 20%;
+    height: 25%;
+    color: white;
+    justify-content: center;
+}
+.overaly-title h4{
+    font-size: 28px;
+}
+.overlay-description p{
+    font-size: 12px;
+}
+.divider{
+    flex: 1px;
+    border: 0.5px solid white;
+}
+.element{
+    padding: 0 10px;
+    flex: 50%;
+}
+.overlay-size{
+    height: auto;
+}
+.description-mobile{
+    display: none;
+    font-size: 14px;
+}
+.upper.interior{
+    background-position: center;
+    background-size: cover;
+}
+.upper.interior .overlay{
+    padding: 0;
+    height: initial;
+    width: 27%;
+}
+.upper.interior .overlay-size{
+    padding-right: 100px;
+    height: auto;
+}
+.upper.interior .element{
+    margin: 20px 0;
+    padding: 0;
+}
+.upper.interior .divider{
+    margin-right: 80%;
+}
+
+.specs{
+    height: 100vh;
+    background-color: black;
+}
+.specs .left-side{
+    flex:1;
+    align-items: center;
+    justify-content: center;
+}
+.specs .right-side{
+    flex:1;
+    /* background-color: darkgray; */
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+.specs-image{
+    height: 100%;
+    width: 100%;
+    min-width: 300px;
+    min-height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.specificatii{
+    height: auto;
+    width: 100%;
+    padding: 50px 0;
+}
+.specificatii p{
+    padding: 5px 0;
+}
+.specs h2{
+    font-size: 28px;
+}
+.specs .button{
+    border-color: white;
+    color: white
+}
+.specs .button:hover{
+    background:white;
+    color:black;
+}
+.left-column{
+    padding: 25px 50px 25px 0;
+    flex: 50%;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* align-items: center; */
+    color: white;
+}
+.right-column{
+    padding: 25px 0 25px 50px;
+    flex: 50%;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* align-items: center; */
+    color: white;
+}
+
+/* .footer {
+    background-color: black;
+} */
+
+
+
+
+
+@media(max-width: 1025px) and (min-width: 768px){
+    .overlay{
+        padding: 0 10%;
+    }
+    .content{
+        padding: 0 10%;
+    }
+
+
+
+
+    .upper.interior{
+        flex-direction: column-reverse;
+    }
+    .upper.interior .overlay{
+        width: 100%;
+        height: 25%;
+        padding: 0 10%;
+    }
+    .upper.interior .overlay-size{
+        padding-right: 0;
+        flex-direction: row;
+    }
+    .upper.interior .divider{
+        margin-right: 0;
+    }
+    .upper.interior .element{
+        margin: 0;
+        padding: 0 10px;
+    }
+
+
+
+
+    .specs{
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+
+@media(max-width: 766px){
+    .upper{
+        background-position: right center;
+        max-height: auto;
+    }
+    .content{
+        padding: 24px 24px;
+        flex-direction: column;
+        align-items: initial;
+    }
+    .banner{
+        flex: auto;
+    }
+    .content-description{
+        padding: 15px 0;
+    }
+    .content-description p{
+        padding-left: 0;
+    }
+    .banner-subheader h1{
+        font-size: 23px;
+        line-height: 23px;
+    }
+    .banner-header h2{
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .button.to-hide{
+        display: none;
+    }
+    .button.mobile{
+        display: flex;
+        align-self: center;
+    }
+    .overlay{
+        padding: 0 5%;
+    }
+    .overaly-title h4{
+        font-size:23px ;
+    }
+    .description-mobile{
+        display: block;
+    }
+    .overlay-description{
+        display: none;
+    }
+    .overlay{
+        height: 40%;
+    }
+
+
+
+
+
+    .upper.interior{
+        flex-direction: column-reverse;
+    }
+    .upper.interior .overlay{
+        width: 100%;
+        height: 40%;
+        padding: 0 5%;
+    }
+    .upper.interior .overlay-size{
+        padding-right: 0;
+        flex-direction: row;
+    }
+    .upper.interior .divider{
+        margin-right: 0;
+    }
+    .upper.interior .element{
+        margin: 0;
+        padding: 0 10px;
+    }
+
+
+
+
+
+
+    .specs{
+        flex-direction: column;
+        height: auto;
+    }
+    .specificatii{
+        padding: 25px 0;
+    }
+    .right-column{
+        padding-left: 20px;
+    }
+    .left-column{
+        padding-right: 20px;
+        padding-left: 55px;
+        text-align: end;
+    }
+    .specificatii p{
+        font-size: 14px;
+    }
+    .right-column p{
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+
+
+
+.shit{
+    height: 50vh;
+    background: gray;
+}
+

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Configurator</title>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="nav-footer.css">
+        <link rel="stylesheet" href="configurator.css">
+    </head>
+    <body>
+        
+        <header>
+            <div class="logo">
+                <!-- <img src="Logo.png" alt=""> -->
+                <a href="index.html" class="logo-img"></a>
+                <a href="index.html">Electric Vehicles</a>
+            </div>
+            <nav class="min">
+                <ul>
+                    <li><a id='slide-1'class="active">1. Model</a></li>
+                    <li><a class="slide-2">2. Exterior</a></li>
+                    <li><a class="slide-3">3. Interoir</a></li>
+                    <li><a class="slide-4">4. Accesorii</a></li>
+                    <li><a class="slide-5">5. Plata</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle"><em class="fas fa-bars"></em></div>
+        </header>
+
+        <div id="inserttest">
+
+        </div>
+
+        <div class='fullpage flex shown' id="model" >
+            <div class="preview flex-74 flex flex-col-reverse">
+                <div class="overlay flex ">
+                    <div class="overlay-size flex ">
+                        <div class="element flex flex-col">
+                            <h2 class="performance model_s hidden" id="autonomie-performance">560 km</h2>
+                            <h2 class="hidden model_s hidden" id='autonomie-long-range'>630 km</h2>
+
+                            <h2 class="performance e-tron hidden" id="autonomie-performance">377 km</h2>
+                            <h2 class="hidden e-tron hidden" id='autonomie-long-range'>288 km</h2>
+
+                            <h2 class="performance mach-e hidden" id="autonomie-performance">402 km</h2>
+                            <h2 class="hidden mach-e hidden" id='autonomie-long-range'>370 km</h2>
+
+                            <p>Autonomie</p>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="element flex flex-col">
+                            <h2 class="performance model_s hidden" id='max-speed-performance'>263 km/h</h2>
+                            <h2 class="hidden model_s" id="max-speed-long-range">249 km/h</h2>
+
+                            <h2 class="performance e-tron hidden" id='max-speed-performance'>199 km/h</h2>
+                            <h2 class="hidden e-tron" id="max-speed-long-range">189 km/h</h2>
+
+                            <h2 class="performance mach-e hidden" id='max-speed-performance'>180 km/h</h2>
+                            <h2 class="hidden mach-e" id="max-speed-long-range">180 km/h</h2>
+                            <p>Viteza maxima</p>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="element flex flex-col">
+                            <h2 class="performance model_s hidden" id="acceleratie-performance">2.4 s</h2>
+                            <h2 class="hidden model_s" id='acceleratie-long-range'>3.7 s</h2>
+
+
+                            <h2 class="performance e-tron hidden" id="acceleratie-performance">5.7 s</h2>
+                            <h2 class="hidden e-tron" id='acceleratie-long-range'>6.8 s</h2>
+
+                            <h2 class="performance mach-e hidden" id="acceleratie-performance">3.9 s</h2>
+                            <h2 class="hidden mach-e" id='acceleratie-long-range'>6.1 s</h2>
+
+                            <p>0-100km/h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="selection flex-26 flex flex-col">
+                <h2>Selecteaza modelul</h2>
+
+                <p class="model_s hidden">Toate masinile au motor dublu,tractiune integrata, sistem de suspensie adaptiv, interior si sunet premium</p>
+
+
+                <p class="e-tron hidden">Cu Audi e-tron 55, eficienta electrica nu sacrifica performanta; motorul dublu produce 300kW de putere, propulsand acest SUV de la 0 la 100km/h in mai putin de 6 secunde </p>
+                
+                <p class="mach-e hidden">Construit cu toata pasiunea statutului sau emblematic, Mustang Mach-E este o noua forma a libertatii. Pregateste-te sa te indragostesti de condus din alta perspectiva</p>
+                
+                <div class='optiune flex long-range not-selected '>
+                    <div class="container model_s flex hidden">
+                        <p>Long Range Plus</p>
+                        <p>68.490€</p>
+                    </div>
+
+                    <div class="container e-tron flex hidden">
+                        <p>S line</p>
+                        <p>75.890€</p>
+                    </div>
+
+                    <div class="container mach-e flex hidden">
+                        <p>Premium</p>
+                        <p>46.490€</p>
+                    </div>
+                </div>
+                <div class='optiune flex  performance selected '>
+
+                     <div class="container model_s flex hidden">
+                        <p>Performance</p>
+                        <p>86.890€</p>
+                    </div>
+
+                    <div class="container e-tron flex hidden">
+                        <p>Launch edition</p>
+                        <p>94.890€</p>
+                    </div>
+
+                    <div class="container mach-e flex hidden">
+                        <p>GT</p>
+                        <p>55.490€</p>
+                    </div>
+                </div>
+                <div class="extra model_s hidden">
+                    <p>Modelul S Performance include:</p>
+                    <ul>
+                        <li>Acceleratie mai rapida: 0-100km in 2.4s</li>
+                        <li>Modul Ludicrous</li>
+                        <li>Imbunatatirea designului interior</li>
+                        <li>Spoiler din fibra de carbon</li>
+                        <button class="testbutton deep_blue">lol blue</button>
+                        <button class="testbutton pearl_white">lol white</button>
+                        <button class="testbutton_wheels tempest">tempest tyres</button>
+                        <button class="testbutton_wheels carbon_twin">carbon-twin tyres</button>
+                    </ul>
+                </div>
+                <div class="extra e-tron hidden">
+                    <p>Modelul Launch edition include:</p>
+                    <ul>
+                        <li>Acceleratie mai rapida: 0-100km in 2.4s</li>
+                        <li>Modul Ludicrous</li>
+                        <li>Imbunatatirea designului interior</li>
+                        <li>Spoiler din fibra de carbon</li>
+                    </ul>
+                </div>
+
+                <div class="extra mach-e hidden">
+                    <p>GT edition include:</p>
+                    <ul>
+                        <li>Roti din aluminiu de 20"</li>
+                        <li>Motor dublu</li>
+                        <li>Tractiune intrgrata permananenta</li>
+                        <li>Sistem de sunet B&O</li>
+                        <li>Handsfree</li>
+                        <li>Scaune cu drivere de memorie si oglinzi pliante</li>
+                    </ul>
+                </div>
+                <div class="next-zone flex">
+                    <div id="next"></div>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div id='exterior' class="fullpage flex hidden">
+            <div class="preview flex-74">
+            </div>
+            <div class="selection flex-26 flex flex-col">
+                <h2>Selecteaza culoarea</h2>
+                <div class=" flex flex-col">
+                    <div class="colors flex ">
+                        <div class="color white"></div>
+                        <div class="color black"></div>
+                        <div class="color grey"></div>
+                        <div class="color blue "></div>
+                        <div class="color red"></div>
+                    </div>
+                    <div class="flex color-text model_s">
+                        <p class="hidden">Pearl White</p>
+                        <p class="hidden">Solid Black</p>
+                        <p class="hidden">Midnight Silver Metalic</p>
+                        <p class="hidden">Deep Blue Metallic</p>
+                        <p class="hidden">Red Multi-coat</p>
+                    </div>
+                    <div class="flex color-text e-tron">
+                        <p class="hidden">Glacier White Metallic</p>
+                        <p class="hidden">Mythos Black Metallic</p>
+                        <p class="hidden">Typhoon Grey Metallic</p>
+                        <p class="hidden">Navarra Blue Metallic</p>
+                        <p class="hidden">Catalunya Red Metallic</p>
+                    </div>
+                    <div class="flex color-text mach-e">
+                        <p class="hidden">Star White</p>
+                        <p class="hidden">Shadow Black</p>
+                        <p class="hidden">Iconic Silver</p>
+                        <p class="hidden">Grabber Blue</p>
+                        <p class="hidden">Rapid Red</p>
+                    </div>
+                </div>
+                <h2>Selecteaza rotile</h2>
+                <!-- <div class="next-zone flex">
+                    <div id="next2"></div>
+                </div> -->
+            </div>
+        </div>
+        
+        <div id='interior' class="fullpage flex hidden">
+
+            </div>
+        </div>
+        <div id='accesorii' class="hidden">
+            <button id="next4"> </button>
+        </div>
+        <div id='Plata' class="hidden">
+            <button id="next5"> </button>
+        </div>
+        
+        
+        
+        
+
+
+        <!-- <section class="footer flex">
+            <div class="left-side flex-el flex flex-col">
+                <div class="link flex-el flex flex-col ">
+                    <a href="">Informatii Legale</a>
+                    <a href="">Termeni si Conditii</a>
+                    <a href="">Contact</a>
+                </div>
+                <div class="copyright">
+                    <p>© 2020 Electric Vehicles</p>
+                </div>
+            </div>
+            <div class="right-side flex-el flex">
+                <div class="social flex flex-col flex-el">
+                    <p>Urmareste-ne</p>
+                    <div class="icons flex">
+                        <a href="https://www.facebook.com"></a>
+                        <a href="https://www.linkedin.com"></a>
+                        <a href="https://www.twitter.com"></a>
+                        <a href="https://www.instagram.com"></a>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        
+
+        <script src="https://kit.fontawesome.com/133c9485b0.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/configurator.js"></script>
+    </body>
+</html>

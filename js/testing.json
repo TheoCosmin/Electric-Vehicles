@@ -1,0 +1,171 @@
+{
+   "model_s": 
+      {
+         "subtitle": "Toate masinile au motor dublu, tractiune integrala, sistem de suspensie adaptiv, interior si sunet premium",
+         "mode_options": [
+            {
+               "name": "Long Range Plus",
+               "pret": 68490,
+               "description": null,
+               "autonomie": 630,
+               "viteza_max": 249,
+               "acceleratie": 3.7
+            },
+            {
+               "name": "Performance",
+               "pret": 86890,
+               "description": ["Modelul S Performance include:", "Acceleratie mai rapida: 0-100km in 2.4s","Modul Ludicrous","Imbunatatirea designului interior","Spoiler din fibra de carbon"],
+               "autonomie": 560,
+               "viteza_max": 263,
+               "acceleratie": 2.4
+            }
+         ],
+         "paint":[
+            {
+               "id" : "pearl_white",
+               "pret": 0,
+               "name": "Pearl White"
+            },
+            {
+               "id": "solid_black",
+               "pret": 1500,
+               "name": "Solid Black"
+            },
+            {
+               "id":"midnight_silver",
+               "pret":1500,
+               "name":"Midnight Silver Metallic"
+            },
+            {
+               "id": "deep_blue",
+               "pret":1500,
+               "name":"Deep Blue Metallic"
+            },
+            {
+               "id": "red_multi_coat",
+               "pret": 1500,
+               "name": "Red Multi coat metallic"
+            }
+
+         ],
+         "wheels":[
+            {
+               "id": "tempest",
+               "pret": 0,
+               "name": "Roti 19\" Tempest" 
+            },
+            {
+               "id": "carbon",
+               "pret": 1500,
+               "name": "Roti 19\" Sonic Carbon Slipstream"
+            },
+            {
+               "id": "carbon_twin",
+               "pret": 1500,
+               "name": "Roti 21\" Sonic Carbon Twin Turbine"
+            }
+         ],
+         "interior":[
+            {
+               "id": "black",
+               "pret": 0,
+               "name": "All Black"
+            },
+            {
+               "id": "black_white",
+               "pret": 1500,
+               "name": "Black and white"
+            },{
+               "id": "cream",
+               "pret": 1500,
+               "name": "cream"
+            }
+         ]
+      },
+
+   "e-tron":
+      {
+         "subtitle": "Cu Audi e-tron 55, eficienta electrica nu sacrifica performanta; motorul dublu produce 300kW de putere, propulsand acest SUV de la 0 la 100km/h in mai putin de 6 secunde",
+
+         "mode_options": [
+            {
+               "name": "S Line",
+               "pret": 75890,
+               "description": null,
+               "autonomie": 377,
+               "viteza_max": 189,
+               "acceleratie": 6.8
+            },
+            {
+               "name": "Launch Edition",
+               "pret": 94890,
+               "description": ["Modelul Launch edition include:", "Acceleratie mai rapida: 0-100km in 2.4s","Modul Ludicrous","Imbunatatirea designului interior","Spoiler din fibra de carbon"],
+               "autonomie": 288,
+               "viteza_max": 199,
+               "acceleratie": 5.7
+            }
+         ],
+         "paint":[
+            {
+               "id" : "glacier_white",
+               "pret": 0,
+               "name": "glacier White"
+            },
+            {
+               "id": "mythos_black",
+               "pret": 1500,
+               "name": "mythos Black"
+            },
+            {
+               "id":"typhoon_grey",
+               "pret":1500,
+               "name":"typhoon grey"
+            },
+            {
+               "id": "galaxy_blue",
+               "pret":1500,
+               "name":"galaxy blue"
+            },
+            {
+               "id": "catalunya_red",
+               "pret": 1500,
+               "name": "catalunya red"
+            }
+
+         ],
+         "wheels":[
+            {
+               "id": "arm",
+               "pret": 0,
+               "name": "Roti 20\" 5-Arm Turbine' design " 
+            },
+            {
+               "id": "v_poke",
+               "pret": 1500,
+               "name": "Roti 21\" 5-V-Spoke Star' design"
+            },
+            {
+               "id": "spoke",
+               "pret": 1500,
+               "name": "Roti 21\" 15-Spoke' design"
+            }
+         ],
+         "interior":[
+            {
+               "id": "black",
+               "pret": 0,
+               "name": "black twin leather"
+            },
+            {
+               "id": "beige",
+               "pret": 1500,
+               "name": "beige twin leather"
+            },{
+               "id": "brown",
+               "pret": 1500,
+               "name": "brown twin leather"
+            }
+         ]
+        
+      }
+}
