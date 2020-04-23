@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Configurator</title>
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="nav-footer.css">
         <link rel="stylesheet" href="configurator2.css">
@@ -60,6 +60,10 @@
                     <ul id="description_elements">
                     </ul>
                 </div>
+                <div class="price flex">
+                    <p>Pret: </p>
+                    <p class="total_price"></p>
+                </div>
             </div>
         </section>
 
@@ -76,6 +80,11 @@
                         <div class="name flex">Pearl LULUE</div>
                         <div class="pret flex">2200eur</div>
                     </div> -->
+
+                </div>
+                <div class="price flex">
+                    <p>Pret: </p>
+                    <div class="total_price"></div>
                 </div>
             </div>
         </section>
@@ -87,7 +96,13 @@
             <div class="selection flex-26 flex flex-col">
                 <h2>Selecteaza Interiorul</h2>
                 <div id="interior_ales" class="flex flex-col"></div>
+                <div id="descriere_interior"></div>
+                <div class="price flex">
+                    <p>Pret:</p>
+                    <div class="total_price"></div>
+                </div>
             </div>
+            
         </section>
 
 
@@ -95,14 +110,65 @@
 
 
         <section id="accesorii" class="hidden fullpage flex">
-            <button>HELLO4</button>
+            <div class="preview flex-74 flex"></div>
+            <div class="selection flex-26 flex flex-col">
+                <h2>Selecteaza Accesoriile</h2>
+                <div id="accesorii_options"></div>
+                <div class="price flex">
+                    <p>Pret: </p>
+                    <div class="total_price"></div>
+                </div>
+            </div>
         </section>
 
 
 
 
         <section id="plata" class="hidden fullpage flex">
+            <div class="date flex-74 flex">
+                <form action="" method="POST" id="payment_form" class="flex flex-col">
+                    <div class="date_personale flex flex-col">
+                        <h2>Introduceti Detele Personale</h2>
+                        <div class="date_input flex flex-col">
+                            <div class="flex">
+                                <div class="first_name_container ">
+                                    <div>
+                                        <label for="first_name">Prenume:</label><br>
+                                        <input type="text" id="first_name" placeholder="John" name="first_name" required autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="last_name_container">
+                                    <div>
+                                        <label for="last_name">Nume:</label><br>
+                                        <input type="text" id="last_name" placeholder="Smith" name="last_name" required autocomplete="off">    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="email_container ">
+                                    <div>
+                                        <label for="email">Adresa Email:</label><br>
+                                        <input type="Email" id="email" placeholder="John.Smith@gmail.com" name="email" required autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="phone_container">
+                                    <div>
+                                        <label for="phone">Telefon:</label><br>
+                                        <input type="text" id="phone" name="phone" required autocomplete="off">    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="plata">
 
+                    </div>
+                </form>
+            </div>
+            <div class="rezumat flex-26 flex flex-col">
+
+            </div>
         </section>
 
 

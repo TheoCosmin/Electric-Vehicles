@@ -2,27 +2,43 @@ var numberOfPages = $('.fullpage').length;
 var currentSlide = "#model";
 var JSON;
 var model;
-var modelsNo;
 var selectedOption = 0;
 var autonomie = [];
 var viteza_max = [];
 var acceleratie = [];
 var init = false;
+
+var models = []
+var modelsNo;
+var models_price = [];
+var selectedModel = 0;
+
 var colors = [];
 var colors_name = [];
 var colors_price = [];
 var colorNumber;
 var selectedColor = 0;
+
 var wheels = [];
 var wheels_name = [];
 var wheels_price =[];
 var wheelsNumber;
 var selectedWheel = 0;
+
 var interior = [];
 var interior_name = [];
 var interior_price = [];
 var interiorNumber;
 var selectedInterior = 0;
+
+var accesorii = [];
+var accesorii_name = [];
+var accesorii_price = [];
+var accesoriiNumber;
+var selectedAccesorii = []; 
+
+var price = 0;
+
 
 
 function getUrlVars()
@@ -83,10 +99,14 @@ function getCarSpecs(){
                 autonomie.push(JSON[model].mode_options[i].autonomie);
                 viteza_max.push(JSON[model].mode_options[i].viteza_max);
                 acceleratie.push(JSON[model].mode_options[i].acceleratie);
+                models.push(JSON[model].mode_options[i].name);
+                models_price.push(JSON[model].mode_options[i].pret);
+
             }
             colorNumber = JSON[model].paint.length;
             wheelsNumber = JSON[model].wheels.length;
-            interiorNumber = JSON[model].interior.length;
+            interiorNumber = JSON[model].interior.optiuni.length;
+            accesoriiNumber = JSON[model].accesorii.length;
 
             for( i = 0 ; i < colorNumber; i++){
                 colors.push(JSON[model].paint[i].id)
@@ -99,15 +119,25 @@ function getCarSpecs(){
                 wheels_price.push(JSON[model].wheels[i].pret)
             }
             for(i = 0; i < interiorNumber ; i++){
-                interior.push(JSON[model].interior[i].id)
-                interior_name.push(JSON[model].interior[i].name)
-                interior_price.push(JSON[model].interior[i].pret)
+                interior.push(JSON[model].interior.optiuni[i].id)
+                interior_name.push(JSON[model].interior.optiuni[i].name)
+                interior_price.push(JSON[model].interior.optiuni[i].pret)
+            }
+            for(i = 0 ; i < accesoriiNumber; i++){
+                accesorii.push(JSON[model].accesorii[i].id)
+                accesorii_name.push(JSON[model].accesorii[i].name)
+                accesorii_price.push(JSON[model].accesorii[i].pret)
+                selectedAccesorii.push(0)
             }
             updateImage();
             updateInteriorImage();
+            insertOptions();
             insertColors();
             insertWheels();
             insertInterior();
+            insertInteriorDescription();
+            insertAccesoriiOptions();
+            writePrice(models_price[selectedModel])
             init = true;
         }
     })
@@ -203,43 +233,65 @@ function insertColors(){
 }
 
 function insertInterior(){
-    $.getJSON("js/testing.json", function(result){
-        JSON = result;   
-        //add html code for each interior option
-        $('<div id="interior_options" class = " flex"></div>').appendTo('#interior_ales');
+    $('<div id="interior_options" class = " flex"></div>').appendTo('#interior_ales');
         for(i = 1 ; i<= interiorNumber;i++){
             $('<div class ="interior_option"></div>').appendTo('#interior_options');
         }
-
-        //add the interior background icon for each option
         for(i = 1; i<= interiorNumber; i++){
             $('.interior_option:nth-child('+i+')').css('background','url(img/configurator/'+model+'/interior/'+interior[i-1]+'.png)');
             $('.interior_option:nth-child('+i+')').css('background-position','center');
             $('.interior_option:nth-child('+i+')').css('background-repeat','no-repeat');
             $('.interior_option:nth-child('+i+')').css('background-size','cover');
         }
-
-        //add selected class to the first interior option(default)
         $('.interior_option:first').addClass('selected');
-        //write interior name of the default option
         getInteriorName();
+}
+
+function insertInteriorDescription(){
+    $.getJSON("js/testing.json", function(result){
+        JSON = result;   
+        $('<p>Interiorul Include:</div>').appendTo('#descriere_interior');
+        $('<ul></ul>').insertAfter("#descriere_interior p")
+        for(i = 0 ; i< JSON[model].interior.descriere.length;i++){
+            $('<li>'+JSON[model].interior.descriere[i]+'</li>').appendTo("#descriere_interior ul");
+        }
     })
+}
+function insertAccesoriiOptions(){
+    for(i = 0 ;i<accesoriiNumber;i++){
+        $('<div class="optiune flex"><div class="container flex"><p>'+accesorii_name[i]+'</p><p>'+addCommas(accesorii_price[i])+'€</p></div></div>').appendTo("#accesorii_options");
+    }
+}
+
+function writePrice(data){
+    $('<p> '+addCommas(data)+'€</p>').appendTo(".total_price");
+}
+function updatePrice(){
+    var price_old = price;
+    price = models_price[selectedOption]+ colors_price[selectedColor] + wheels_price[selectedWheel] + interior_price[selectedInterior];
+    for(i = 0; i<selectedAccesorii.length; i++){
+        price += selectedAccesorii[i];
+    }
+    $({someValue: price_old}).animate({someValue: price}, {
+        duration: 1000,
+        ease: 'swing',
+        step: function() { 
+            $('.total_price p').text(addCommas(Math.round(this.someValue)) + '€');
+        }
+    });
+    setTimeout(() => {
+        $('.total_price p').text(addCommas(price) + '€');
+    }, 1010);
 }
 
 
-
 function insertOptions(){
-    $.getJSON("js/testing.json", function(result){
-        JSON = result;
-         //get model options + create Html code for buttons + update html file with them
-         for (i = 0; i < modelsNo; i++){
-            var modelName = JSON[model].mode_options[i].name;
-            var modelPrice = JSON[model].mode_options[i].pret;
-            $('<div class="optiune flex"> <div class ="container flex"> <p>'+modelName+'</p> <p>'+addCommas(modelPrice)+'€</p></div></div>').appendTo('#options');
-        }
-        //make the first option the default selected option
-        $('.optiune:first').addClass('selected');
-    })
+
+    for( i = 0 ; i < modelsNo ;i++){
+        $('<div class="optiune flex"> <div class ="container flex"> <p>'+models[i]+'</p> <p>'+addCommas(models_price[i])+'€</p></div></div>').appendTo('#options');
+    }
+    $('.optiune:first').addClass('selected');
+    price = models_price[selectedOption];
 }
 
 function getCarDescription(){
@@ -280,6 +332,7 @@ function colorClick(){
                 updateImage();
                 $('.preview').fadeIn(300);
             }, 250);
+            updatePrice();
         }
     })
 }
@@ -304,6 +357,7 @@ function wheelsClick(){
                 updateImage();
                 $('.preview').fadeIn(300);
             }, 250);
+            updatePrice();
         }
     })
 }
@@ -328,9 +382,23 @@ function interiorOptionClick(){
                 updateInteriorImage();
                 $('.interior_preview').fadeIn(300);
             }, 250);
+            updatePrice();
         }
     })
 }
+function accesoriiClick(){
+   $(document).on('click',"#accesorii_options .optiune", function(){
+        if(!$(this).hasClass('selected')){
+            selectedAccesorii[$(this).index()] = accesorii_price[$(this).index()]
+        }
+        else{
+            selectedAccesorii[$(this).index()] = 0
+        }
+       updatePrice();
+       $(this).toggleClass('selected')
+   })
+}
+
 
 
 function optiuneClick(){
@@ -372,6 +440,8 @@ function optiuneClick(){
                     $('#acceleratie').text(Math.round(this.someValue *10)/10 + ' s');
                 }
             });
+
+            updatePrice();
         }
     })
 }
@@ -395,17 +465,18 @@ function updateInteriorImage(){
 
 
 
-
+getCarSpecs();
 
 $(document).ready(function(){
 
     changeTabs();
-    getCarSpecs();
-    insertOptions();
+    // insertOptions();
     insertSpecs();
     optiuneClick();
     colorClick();
     wheelsClick();
+    accesoriiClick();
     interiorOptionClick();
+    // updatePrice();
 
 });

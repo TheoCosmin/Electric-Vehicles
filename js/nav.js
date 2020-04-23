@@ -11,7 +11,7 @@ $(document).ready(function a(){
                 setTimeout(() => {
                     $('header').removeClass('active');
                     $('header').removeClass('unclickable');
-                }, 2000);
+                }, 1000);
                 // $('body').removeClass('locked');
             }
 
@@ -23,7 +23,7 @@ $(document).ready(function a(){
                 $('nav').addClass('to-fade');
                 setTimeout(() => {
                     $('header').removeClass('unclickable');
-                }, 2000);
+                }, 1000);
                 // $('body').addClass('locked');
             }
         }

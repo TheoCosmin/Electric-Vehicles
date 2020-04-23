@@ -65,20 +65,36 @@
                "name": "Roti 21\" Sonic Carbon Twin Turbine"
             }
          ],
-         "interior":[
-            {
-               "id": "black",
-               "pret": 0,
-               "name": "All Black"
+         "interior":
+         {
+            "descriere": ["Sistem audio premium","Scaune incalzite pentru fiecare pasager","Volan incalzit","Vonectivitate premium(1 an inclus)","Muzica si media prin Bluetooth","Consola centrala pentru incarcarea telefonului wireless"],
+            "optiuni":[
+               {
+                  "id": "black",
+                  "pret": 0,
+                  "name": "All Black"
+               },
+               {
+                  "id": "black_white",
+                  "pret": 1500,
+                  "name": "Black and white"
+               },{
+                  "id": "cream",
+                  "pret": 1500,
+                  "name": "cream"
+               }
+            ]
+         },
+         "accesorii":[
+            { 
+               "id": "autopilot",
+               "pret": 1000,
+               "name": "Autopilot"
             },
             {
-               "id": "black_white",
-               "pret": 1500,
-               "name": "Black and white"
-            },{
-               "id": "cream",
-               "pret": 1500,
-               "name": "cream"
+               "id":"pachet auto-conducere",
+               "pret": 7000,
+               "name": "Pachet Auto-conducere"
             }
          ]
       },
@@ -150,22 +166,28 @@
                "name": "Roti 21\" 15-Spoke' design"
             }
          ],
-         "interior":[
-            {
-               "id": "black",
-               "pret": 0,
-               "name": "black twin leather"
-            },
-            {
-               "id": "beige",
-               "pret": 1500,
-               "name": "beige twin leather"
-            },{
-               "id": "brown",
-               "pret": 1500,
-               "name": "brown twin leather"
-            }
-         ]
+         "interior":
+         {
+            "descriere": ["Scaune sport","Scaunele din fata incalzite","Scaun ajustabil electric"],
+            "optiuni":
+            [
+               {
+                  "id": "black",
+                  "pret": 0,
+                  "name": "black twin leather"
+               },
+               {
+                  "id": "beige",
+                  "pret": 1500,
+                  "name": "beige twin leather"
+               },{
+                  "id": "brown",
+                  "pret": 1500,
+                  "name": "brown twin leather"
+               }
+            ]
+
+         }
         
       }
 }

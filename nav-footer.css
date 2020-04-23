@@ -263,14 +263,14 @@ header nav ul li a.active{
         display: block;
         /* background: #16324F;   */
         flex: calc(100vh - 50px);
-        animation: navbar-menu-jos-r 1.5s ease;
+        animation: navbar-menu-jos-r .5s ease;
         animation-fill-mode: forwards;
         
     }
     header.active.to-fade nav.to-fade{
         display: block;
         flex: calc(100vh - 50px);
-        animation: navbar-menu-jos 1.5s ease;
+        animation: navbar-menu-jos .5s ease;
         animation-fill-mode: forwards;
     }
     @keyframes navbar-jos {
@@ -286,14 +286,14 @@ header nav ul li a.active{
     header.active.to-fade{
         padding: 0;
         /* height: 100vh; */
-        animation: navbar-jos 2s ease-out;
+        animation: navbar-jos 1s ease-out;
         animation-fill-mode: forwards;
         animation-direction: alternate;
         /* face ca animatia sa se opreazaca la final */
     }
     header.active{
         padding: 0;
-        animation: navbar-jos-r 2s ease-out;
+        animation: navbar-jos-r 1s ease-out;
         animation-fill-mode: forwards;
         animation-direction: alternate;
     }
