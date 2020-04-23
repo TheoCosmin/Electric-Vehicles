@@ -53,7 +53,8 @@ header nav{
     line-height: 50px;
     display: none;
     font-size: 1.3em;
-    right: 10%;
+    /* right: 10%; */
+    right: 20px;
     cursor: pointer;
 }
 header nav ul{
