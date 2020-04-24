@@ -78,7 +78,28 @@ function changeTabs(){
            }, 500);
     })
 }
-
+function mobileChangeTabs(){
+    $('#button-1,#button-2,#button-3, #button-4').click(function(){
+        $(currentSlide).fadeOut();
+        setTimeout(() => {
+            var index = $(this)[0].id.split('-')
+            var page = $('.fullpage')[index[1]].id;
+            currentSlide = "#"+page;
+            $(currentSlide).fadeIn();
+            $(currentSlide).css('display','flex');
+            for(i  = 1; i <=numberOfPages; i++){
+                var toChange = parseInt(index[1])+1;
+                if ( i == toChange ){
+                   $('header nav ul li:nth-child('+i+') a').addClass('active')
+                }
+                else{
+                  
+                    $('header nav ul li:nth-child('+i+') a').removeClass('active')
+                }
+            }
+        }, 500);
+    })
+}
 
 
 
@@ -505,6 +526,7 @@ getCarSpecs();
 $(document).ready(function(){
 
     changeTabs();
+    mobileChangeTabs();
     // insertOptions();
     insertSpecs();
     optiuneClick();
