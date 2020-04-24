@@ -11,6 +11,8 @@ body{
     min-width: 374px;
     /* max-width: 100vw; */
     max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 /* functie pt dezactivarea animatiilor atunci cand se incarca pagina. Se vor dezactiva cu un script JS care va sterge clasa
 la 10ms dupa ce pagina s-a incarcat. Scriptul JS trebuie particularizat pentru elementele dorite. */
