@@ -517,6 +517,15 @@ function updateInteriorImage(){
 
 
 
+$('.submit').click(function(){
+    $('header').fadeOut(300)
+    $('#plata').fadeOut(300)
+    setInterval(() => {
+        $('#success').fadeIn()
+        $('#success').css('display','flex')
+    }, 250);
+})
+
 
 
 

@@ -48,7 +48,6 @@ header nav ul li a.active{
 .flex-col-reverse{
     flex-direction: column-reverse;
 }
-
 .flex-74{
     flex: 74%;
 }
@@ -61,6 +60,9 @@ header nav ul li a.active{
 .hidden{
     display: none;
 }
+
+
+
 
 .fullpage{
     height: calc(100vh - 50px);
@@ -127,10 +129,7 @@ header nav ul li a.active{
     min-width: 95px;
     text-align: center;
 }
-.preview{
-    /* background: url(img/configurator/oops.png) center no-repeat; 
-    background-size: contain; */
-}
+
 
 .selection h2{
     font-size: 28px;
@@ -155,7 +154,6 @@ header nav ul li a.active{
     align-items: center;
 }
 .optiune{
-    /* flex: 1; */
     width: 100%;
     height: 50px;
     justify-content: center;
@@ -163,7 +161,6 @@ header nav ul li a.active{
     border-radius: 50px;
     border: 2px solid rgba(0, 0, 0, 0.2);
     min-width: 300px;
-    /* max-width: 550px; */
     transition: .5s ease;
 }
 .optiune.selected{
@@ -175,7 +172,6 @@ header nav ul li a.active{
 }
 .container p{
     margin: 0;
-    /* flex: auto; */
 }
 .container p:first-child{
     align-self: flex-start;
@@ -183,7 +179,6 @@ header nav ul li a.active{
 }
  .container p:last-child{
     align-self: flex-end;
-    /* flex: 1; */
     text-align: end;
 }
 #payment_price .container {
@@ -202,20 +197,12 @@ header nav ul li a.active{
 
 
 
-
-
-
-
-#exterior{
-    /* background-color: lightcoral; */
-}
 #exterior .selection, #interior .selection{
     justify-content: center;
 }
 
 #culori,#roti{
     flex-wrap: wrap;
-    /* padding: 5px 0; */
 }
 #culori .color, #roti .roata,#interior_options .interior_option{
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -229,7 +216,6 @@ header nav ul li a.active{
     width: 50px;    
     cursor: pointer;
     border-radius: 26px;
-    /* transition: 1s ease; */
 }
 
 .name{
@@ -242,24 +228,7 @@ header nav ul li a.active{
     padding-left: 10px;
 }
 
-
-#interior{
-    /* background-color: lightgreen; */
-}
-.interior_preview{
-    /* background: url(img/configurator/model_s/model_model_s_interior_black.png) center no-repeat;
-    background-size: cover; */
-}
-
-#accesorii{
-    /* background-color: lightsalmon; */
-}
-#plata{
-    /* width: 100vw; */
-    /* background-color: lightseagreen; */
-}
 .date{
-    /* border-right:  1px solid rgba(0, 0, 0, 0.2) ; */
     padding: 16vh 11vw;
     background: #d0d0d0;
 }
@@ -272,7 +241,6 @@ header nav ul li a.active{
 .rezumat .preview{
     width: 100%;
     height: 220px;
-    /* min-height: 220px; */
     border: 0;
 }
 .rezumat h2{
@@ -375,6 +343,37 @@ input{
     display: none;
 }
 
+#success{
+    /* background: grey; */
+    height: 100vh;
+}
+.success_content{
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    color: #13293D
+}
+.success_content h2{
+   font-size: 108px;
+}
+.success_content h3{
+    font-size: 26px;
+}
+.success_content a{
+    text-decoration: none;
+    color: #ebebeb;
+    background: #13293D;
+    padding: 10px 40px;
+    margin-top: 20px;
+    border-radius: 30px;
+    transition: .5s ease;
+    border: 2px solid #13293D;
+}
+.success_content a:hover{
+    color: #13293D;
+    background: #ebebeb;
+}
+
 
 
 
@@ -390,22 +389,20 @@ input{
     .selection{
         padding: 50px 20% calc(50px + 130px) 20%;
     }
-    #plata .date{
-        padding-bottom: 50px;
-    }
     .rezumat{
         padding: 30px 11vw;
-    }
-    .price{
-        margin: 0 20%;
-        width: calc(100% - 40%);
-    }
-    #plata.fullpage{
-        flex-direction: column-reverse;
     }
     .preview,.interior_preview{
         min-height: 50vh;
     }
+    #plata .date{
+        padding-bottom: 50px;
+    } 
+    .price{
+        margin: 0 20%;
+        width: calc(100% - 40%);
+    }
+    
     #model .overlay .element h2{
         font-size: 2.5vw;
     }
@@ -415,6 +412,7 @@ input{
     #model .overlay-size{
         padding: 0 20vw;
     }
+
     .date_input div,.plata_input .flex{
         flex-direction: column;
     }
@@ -436,6 +434,10 @@ input{
     .plata_input .form_button{
         display: flex;
     }
+
+    #plata.fullpage{
+        flex-direction: column-reverse;
+    }
     .next_mobile{
         display: block;
     }
@@ -451,6 +453,17 @@ input{
     }
     #plata.fullpage{
         flex-direction: column-reverse;
+    }
+    .selection{
+        flex: auto;
+        min-width: initial;
+        padding: 20px 20px;
+        padding-bottom: 180px;
+        overflow: initial;
+        max-height: initial;
+    }  
+    .rezumat{
+        min-width: initial;
     }
     .preview, .interior_preview{
         min-height: 50vh;
@@ -476,17 +489,7 @@ input{
     #model .element{
         padding: 0;
     }
-    .rezumat{
-        min-width: initial;
-    }
-    .selection{
-        flex: auto;
-        min-width: initial;
-        padding: 20px 20px;
-        padding-bottom: 180px;
-        overflow: initial;
-        max-height: initial;
-    }
+    
     .optiune .container p{
         font-size: 13px;
     }
@@ -514,5 +517,13 @@ input{
     .next_mobile{
         display: block;
     }
+
+
+    .success_content h2{
+        font-size: 54px;
+     }
+     .success_content h3{
+         font-size: 11px;
+     }
 
 }
