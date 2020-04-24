@@ -455,7 +455,10 @@ input{
     .preview, .interior_preview{
         min-height: 50vh;
     }
-
+    .price{
+        margin: 0 20px;
+        width: calc(100% - 40px);
+    }
     #model .overlay .element h2{
         font-size: 21px;
         font-weight: normal;
