@@ -60,6 +60,9 @@
                     <ul id="description_elements">
                     </ul>
                 </div>
+                <div class="next_mobile">
+                    
+                </div>
                 <div class="price flex">
                     <p>Pret: </p>
                     <p class="total_price"></p>
@@ -126,7 +129,7 @@
 
         <section id="plata" class="hidden fullpage flex">
             <div class="date flex-74 flex">
-                <form action="" method="POST" id="payment_form" class="flex flex-col">
+                <form action=""  id="payment_form" class="flex flex-col">
                     <div class="date_personale flex flex-col">
                         <h2>Introduceti Datele Personale</h2>
                         <div class="date_input flex flex-col">
@@ -134,13 +137,13 @@
                                 <div class="first_name_container ">
                                     <div>
                                         <label for="first_name">Prenume:</label><br>
-                                        <input type="text" id="first_name" placeholder="John" name="first_name" required autocomplete="off">
+                                        <input type="text" id="first_name" placeholder="John" name="first_name"  required autocomplete="off">
                                     </div>
                                 </div>
                                 <div class="last_name_container">
                                     <div>
                                         <label for="last_name">Nume:</label><br>
-                                        <input type="text" id="last_name" placeholder="Smith" name="last_name" required autocomplete="off">    
+                                        <input type="text" id="last_name" placeholder="Smith" name="last_name"  required autocomplete="off">    
                                     </div>
                                 </div>
                             </div>
@@ -154,28 +157,77 @@
                                 <div class="phone_container">
                                     <div>
                                         <label for="phone">Telefon:</label><br>
-                                        <input type="text" id="phone" name="phone" required autocomplete="off">    
+                                        <input type="text" id="phone" name="phone"  autocomplete="off" required placeholder="0712-345-678" >    
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <hr>
-                    <div class="plata">
-
+                    <div class="plata flex flex-col">
+                        <h2>Plata</h2>
+                        <div class="plata_input flex flex-col">
+                            <div class="card_name_container">
+                                <div>
+                                    <label for="card_name">Numele de pe card:</label><br>
+                                    <input type="text" id="card_name" name="card_name"  autocomplete="off"  required placeholder="John Smith">    
+                                </div>
+                            </div>
+                            <div class="card_number_container">
+                                <div>
+                                    <label for="card_no">Numar card:</label>
+                                    <input type="text" name="card_no" id="card_no"  autocomplete="off" required placeholder="1234-4567-8901-2345">
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="expiration_date_container flex-one">
+                                    <div>
+                                        <label for="expiration_date">Data expirare:</label>
+                                        <input type="text" name="expiration_date" id="expiration_date" required placeholder="MM/YY"  autocomplete="off">
+                                    </div> 
+                                </div> 
+                                <div class="cvv_container flex-one">
+                                    <div>
+                                        <label for="cvv">CVV:</label>
+                                        <input type="text" name="cvv" id="cvv"  autocomplete="off"  required placeholder="123">
+                                    </div>
+                                </div>
+                                <div class="zip_code_container flex-one">
+                                    <div>
+                                        <label for="zip_code">Cod Postal:</label>
+                                        <input type="text" name="zip_code" id="zip_code"  required autocomplete="off" placeholder="123456">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_button flex">
+                                <button class="submit" type="submit"  name="submit" >COMANDA</button>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
             <div class="rezumat flex-26 flex flex-col">
-
+                <div class="preview"></div>
+                <h2>Masina ta</h2>
+                <h2 class="align-start">Rezumat</h2>
+                <hr>
+                <div id="review_items">
+                    <p>Model</p>
+                </div>
+                <hr>
+                <div id="payment_price">
+                </div>
+                <div class="form_button flex">
+                    <button class="submit" type="submit"  name="submit" >COMANDA</button>
+                </div>
             </div>
         </section>
 
+      
 
         <script src="https://kit.fontawesome.com/133c9485b0.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script src="js/nav.js"></script>
         <script src="js/configurator2.js"></script>
-        
     </body>
 </html>

@@ -138,6 +138,8 @@ function getCarSpecs(){
             insertInteriorDescription();
             insertAccesoriiOptions();
             writePrice(models_price[selectedModel])
+            insertSummaryPrice();
+            insertReviewItems();
             init = true;
         }
     })
@@ -251,7 +253,7 @@ function insertInteriorDescription(){
     $.getJSON("js/testing.json", function(result){
         JSON = result;   
         $('<p>Interiorul Include:</div>').appendTo('#descriere_interior');
-        $('<ul></ul>').insertAfter("#descriere_interior p")
+        $('<ul class="elements_description"></ul>').insertAfter("#descriere_interior p")
         for(i = 0 ; i< JSON[model].interior.descriere.length;i++){
             $('<li>'+JSON[model].interior.descriere[i]+'</li>').appendTo("#descriere_interior ul");
         }
@@ -271,7 +273,7 @@ function updatePrice(){
     price = models_price[selectedOption]+ colors_price[selectedColor] + wheels_price[selectedWheel] + interior_price[selectedInterior];
     for(i = 0; i<selectedAccesorii.length; i++){
         price += selectedAccesorii[i];
-    }
+    }48
     $({someValue: price_old}).animate({someValue: price}, {
         duration: 1000,
         ease: 'swing',
@@ -281,7 +283,40 @@ function updatePrice(){
     });
     setTimeout(() => {
         $('.total_price p').text(addCommas(price) + '€');
-    }, 1010);
+    }, 1090);
+    insertSummaryPrice();
+    insertReviewItems();
+}
+
+/* <div class="container flex">
+                        <p>Pret</p>
+                        <p>2325623e</p>
+                    </div> */
+                    // <!-- <p>Model S Long Range</p>
+                    // <p>Pearl White</p>
+                    // <p>19" tempest wheels</p>
+                    // <p>Interior All Black</p>
+                    // <p>Autopilot</p>
+                    // <p>Self-driving</p> -->
+function insertSummaryPrice(){
+    $('#payment_price div').remove();
+    $('<div class="container flex"> <p>Pret</p> <p>'+addCommas(price)+'€</p></div>').appendTo('#payment_price');
+}
+function insertReviewItems(){
+    $('#review_items p').remove();
+    $('<p>Model '+models[selectedOption]+'</p>').appendTo("#review_items")
+    $('<p>Autonomie '+autonomie[selectedOption]+'km</p>').appendTo("#review_items")
+    $('<p>Viteza Maxima '+viteza_max[selectedOption]+'km/h</p>').appendTo("#review_items")
+    $('<p>Acceleratie 0-100km/h '+acceleratie[selectedOption]+'s</p>').appendTo("#review_items")
+    $('<p>'+colors_name[selectedColor]+'</p>').appendTo("#review_items")
+    $('<p>'+wheels_name[selectedWheel]+'</p>').appendTo("#review_items")
+    $('<p>Interior '+interior_name[selectedInterior]+'</p>').appendTo("#review_items")
+    for(i = 0 ;i < selectedAccesorii.length; i++){
+        if (selectedAccesorii[i] != 0)
+        $('<p> '+accesorii_name[i]+'</p>').appendTo("#review_items")
+    }
+
+
 }
 
 
@@ -480,3 +515,7 @@ $(document).ready(function(){
     // updatePrice();
 
 });
+
+
+
+

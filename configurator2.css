@@ -150,7 +150,7 @@ header nav ul li a.active{
     margin: 5px 0;
     cursor: pointer;
 }
-#options{
+#options,#accesorii_options{
     width: 100%;
     align-items: center;
 }
@@ -162,31 +162,36 @@ header nav ul li a.active{
     align-items: center;
     border-radius: 50px;
     border: 2px solid rgba(0, 0, 0, 0.2);
-    min-width: 325px;
-    max-width: 550px;
+    min-width: 300px;
+    /* max-width: 550px; */
     transition: .5s ease;
 }
 .optiune.selected{
     border: 2px solid #17BEBB;
 }
-.optiune .container{
+.container{
     flex: 1;
     padding: 0 20px;
 }
-.optiune .container p{
+.container p{
     margin: 0;
     /* flex: auto; */
 }
-.optiune .container p:first-child{
+.container p:first-child{
     align-self: flex-start;
     flex: auto;
 }
-.optiune .container p:last-child{
+ .container p:last-child{
     align-self: flex-end;
     /* flex: 1; */
     text-align: end;
 }
-#description_elements{
+#payment_price .container {
+    padding: 0;
+    font-size: 25px;
+}
+
+#description_elements,.elements_description{
     padding-left: 20px;
     min-width: auto;
 }
@@ -250,17 +255,75 @@ header nav ul li a.active{
     /* background-color: lightsalmon; */
 }
 #plata{
+    /* width: 100vw; */
     /* background-color: lightseagreen; */
 }
 .date{
     /* border-right:  1px solid rgba(0, 0, 0, 0.2) ; */
-    padding: 16vh 13vw;
+    padding: 16vh 11vw;
     background: #d0d0d0;
 }
 .rezumat{
+    min-width: 425px;
+    padding: 30px;
+    position: relative;
+    overflow: auto;
+}
+.rezumat .preview{
+    width: 100%;
+    height: 220px;
+    /* min-height: 220px; */
+    border: 0;
+}
+.rezumat h2{
+    text-align: center;
+    padding: 5px 0;
+    font-size: 24px;
+}
+.rezumat h2.align-start{
+    text-align: start;
+    font-size: 18px;
+    padding-bottom: 0px;
+}
+#review_items p{
+    color: rgba(0, 0, 0, 0.5);
+    padding: 5px 0;
+}
+input::placeholder{
+    color: rgba(0, 0, 0, 0.3)
+}
+input:valid{
+    border: 2px solid #17BEBB;
+    transition: 1s ease;
+}
+input:focus:valid{
+    border: 2px solid #17BEBB
+}
+input:focus:not(valid){
+    border: 2px  solid red;
 }
 form{
     flex: 1;
+}
+#plata button{
+    height: 50px;
+    width: 180px;
+    border-radius: 25px;
+    border: 0;
+    color: #ebebeb;
+    outline: none;
+    background-color: #17BEBB;
+}
+.plata_input .form_button{
+   align-items: center;
+   padding-top: 50px;
+   display: none;
+}
+
+.form_button{
+    flex: 1;
+    justify-content: center;
+    align-items: flex-end;
 }
 .date_personale,.plata{
     flex:1;
@@ -278,19 +341,20 @@ input{
     width: 100%;
     flex: 1;
 }
-hr{
-    border: 1px solid rgba(0, 0, 0, 0.2)
+#plata hr{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
 }
 .first_name_container, .last_name_container,.email_container, .phone_container{
     flex:1;
 }
-.first_name_container,.email_container{
+.first_name_container,.email_container,.cvv_container{
     padding-right: 30px;
 }
-.last_name_container,.phone_container{
+.last_name_container,.phone_container,.cvv_container{
     padding-left: 30px;
 }
-.date_input{
+.date_input,.plata_input{
     flex:1;
     justify-content: space-evenly;
    
@@ -299,16 +363,44 @@ hr{
     flex:1;
 }
 
-
+.next_mobile{
+    margin-top: 40px;
+    width: 80px;
+    height: 80px;
+    align-self: center;
+    background: url(img/configurator/arrow.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 
 
 
 
 @media(max-width: 1025px) and (min-width: 767px){
+    header nav{
+        margin: 0;
+    }
     .fullpage{
         flex-direction: column;
         height: auto;
+    }
+    .selection{
+        padding: 50px 20% calc(50px + 130px) 20%;
+    }
+    #plata .date{
+        padding-bottom: 50px;
+    }
+    .rezumat{
+        padding: 30px 11vw;
+    }
+    .price{
+        margin: 0 20%;
+        width: calc(100% - 40%);
+    }
+    #plata.fullpage{
+        flex-direction: column-reverse;
     }
     .preview,.interior_preview{
         min-height: 50vh;
@@ -322,34 +414,46 @@ hr{
     #model .overlay-size{
         padding: 0 20vw;
     }
-    .date_input div{
+    .date_input div,.plata_input .flex{
         flex-direction: column;
     }
-    .first_name_container,.email_container{
+    .first_name_container,.email_container,.cvv_container{
         padding-right: 0;
     }
-    .last_name_container,.phone_container{
+    .last_name_container,.phone_container,.cvv_container{
         padding-left: 0;
     }    
-    .first_name_container, .last_name_container ,.email_container ,.phone_container{
+    .first_name_container, .last_name_container ,.email_container ,.phone_container,.card_name_container,.card_number_container,.card_name_container,.card_number_container,.cvv_container{
         margin: 20px 0;
     }
     .phone_container{
         margin: 20px 0 50px 0;
     }
+    .rezumat .form_button{
+        display: none;
+    }
+    .plata_input .form_button{
+        display: flex;
+    }
 }
 
 @media(max-width: 767px){
+    header nav{
+        margin: 0;
+    }
     .fullpage{
         flex-direction: column;
         height: auto;
+    }
+    #plata.fullpage{
+        flex-direction: column-reverse;
     }
     .preview, .interior_preview{
         min-height: 50vh;
     }
 
     #model .overlay .element h2{
-        font-size: 24px;
+        font-size: 21px;
         font-weight: normal;
     }
     #model .overlay .element p{
@@ -365,24 +469,39 @@ hr{
     #model .element{
         padding: 0;
     }
-    .selection{
+    .rezumat{
         min-width: initial;
-        padding: 50px 10px;
-        padding-bottom: 180px;
     }
-    .date_input div{
+    .selection{
+        flex: auto;
+        min-width: initial;
+        padding: 20px 20px;
+        padding-bottom: 180px;
+        overflow: initial;
+        max-height: initial;
+    }
+    .optiune .container p{
+        font-size: 13px;
+    }
+    .date_input div,.plata_input .flex{
         flex-direction: column;
     }
-    .first_name_container,.email_container{
+    .first_name_container,.email_container,.cvv_container{
         padding-right: 0;
     }
-    .last_name_container,.phone_container{
+    .last_name_container,.phone_container,.cvv_container{
         padding-left: 0;
     }    
-    .first_name_container, .last_name_container ,.email_container ,.phone_container{
+    .first_name_container, .last_name_container ,.email_container ,.phone_container,.card_name_container,.card_number_container,.cvv_container,.card_name_container,.card_number_container{
         margin: 15px 0;
     }
     .phone_container{
         margin: 15px 0 50px 0;
+    }
+    .rezumat .form_button{
+        display: none;
+    }
+    .plata_input .form_button{
+        display: flex;
     }
 }
