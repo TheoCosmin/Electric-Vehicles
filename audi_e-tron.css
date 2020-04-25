@@ -1,0 +1,62 @@
+.background{
+    background: url(img/e-tron/1920x1080_desktop_A_E-TRON_181018.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+#landing .button{
+    color: white;
+    border-color: white;
+}
+#landing .button:hover{
+    color: black;
+    background: white;
+}
+.upper{
+    background: url(img/e-tron/e-tron.png);
+    background-size: cover;
+    background-position: center;
+}
+.upper.interior{
+    background: url(img/e-tron/e-tron-interior-edited.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.specs-image{
+    background: url(img/e-tron/e-tron_front.png);
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media(max-width: 1025px) and (min-width: 768px){
+    .upper.interior{
+        background: url(img/e-tron/e-tron-interior-edited-mobile.png);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+
+
+@media(max-width: 766px){
+    .upper{
+        /* background: url(img/tesla_model_s//model_s_exterior_mobile.jpg);
+        background-size: contain; */
+
+    }
+    .background{
+        /* background: url(img/e-tron/e-tron.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; */
+    }
+    .upper.interior{
+        background: url(img/e-tron/e-tron-interior-edited-mobile.png);
+        background-size: cover;
+        background-position: center;
+    }
+}

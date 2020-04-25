@@ -361,7 +361,7 @@ header nav ul li a.active{
         align-items: center;
     }
     .footer .icons a{
-        margin: 0 15px;
+        margin: 0;
     }
     .footer .copyright{
         align-self: center;
@@ -371,4 +371,10 @@ header nav ul li a.active{
     }
     
     
+    .footer .icons{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+
 }

@@ -105,6 +105,22 @@
 
          "mode_options": [
             {
+               "name": "Technik 50 quattro",
+               "pret": 67490,
+               "description": null,
+               "autonomie":288,
+               "viteza_max": 187,
+               "acceleratie": 6.8
+            },
+            {
+               "name": "Sport 50 quattro",
+               "pret": 70490,
+               "description": null,
+               "autonomie":289,
+               "viteza_max": 188,
+               "acceleratie": 6.8
+            },
+            {
                "name": "S Line",
                "pret": 75890,
                "description": null,
@@ -115,9 +131,9 @@
             {
                "name": "Launch Edition",
                "pret": 94890,
-               "description": ["Modelul Launch edition include:", "Acceleratie mai rapida: 0-100km in 2.4s","Modul Ludicrous","Imbunatatirea designului interior","Spoiler din fibra de carbon"],
-               "autonomie": 288,
-               "viteza_max": 199,
+               "description": null,
+               "autonomie": 290,
+               "viteza_max": 204,
                "acceleratie": 5.7
             }
          ],
@@ -125,27 +141,27 @@
             {
                "id" : "glacier_white",
                "pret": 0,
-               "name": "glacier White"
+               "name": "Glacier White"
             },
             {
                "id": "mythos_black",
                "pret": 1500,
-               "name": "mythos Black"
+               "name": "Mythos Black"
             },
             {
                "id":"typhoon_grey",
                "pret":1500,
-               "name":"typhoon grey"
+               "name":"Typhoon Grey"
             },
             {
                "id": "galaxy_blue",
                "pret":1500,
-               "name":"galaxy blue"
+               "name":"Galaxy Blue"
             },
             {
                "id": "catalunya_red",
                "pret": 1500,
-               "name": "catalunya red"
+               "name": "Catalunya Red"
             }
 
          ],
@@ -185,9 +201,137 @@
                   "pret": 1500,
                   "name": "brown twin leather"
                }
-            ]
+            ]  
+         },
+         "accesorii":[
+            { 
+               "id": "camera_fata",
+               "pret": 700,
+               "name": "Camera Fata"
+            },
+            {
+               "id":"camera_fata_spate",
+               "pret": 900,
+               "name": "Camera Fata si Spate"
+            },
+            {
+               "id":"vreme_rece",
+               "pret": 900,
+               "name": "Pachet vreme rece"
+            },
+            {
+               "id":"care",
+               "pret": 1500,
+               "name": "Audi Care"
+            }
+         ]
+      },
+      "mach-e":
+      {
+         "subtitle": "Cu Audi e-tron 55, eficienta electrica nu sacrifica performanta; motorul dublu produce 300kW de putere, propulsand acest SUV de la 0 la 100km/h in mai putin de 6 secunde",
 
-         }
-        
+         "mode_options": [
+            {
+               "name": "Select",
+               "pret": 40490,
+               "description": null,
+               "autonomie":430,
+               "viteza_max": 188,
+               "acceleratie": 6.9
+            },
+            {
+               "name": "Premium",
+               "pret": 46890,
+               "description": null,
+               "autonomie":559,
+               "viteza_max": 189,
+               "acceleratie": 6.6
+            },
+            {
+               "name": "California Edition",
+               "pret": 48390,
+               "description": null,
+               "autonomie": 549,
+               "viteza_max": 190,
+               "acceleratie": 5.9
+            },
+            {
+               "name": "GT",
+               "pret": 55890,
+               "description": null,
+               "autonomie": 519,
+               "viteza_max": 214,
+               "acceleratie": 3.6
+            }
+         ],
+         "paint":[
+            {
+               "id" : "star_white",
+               "pret": 0,
+               "name": "Star White"
+            },
+            {
+               "id": "shadow_black",
+               "pret": 150,
+               "name": "Shadow Black"
+            },
+            {
+               "id":"iconic_silver",
+               "pret": 150,
+               "name":"Iconic Silver"
+            },
+            {
+               "id": "grabber_blue",
+               "pret": 600,
+               "name":"Grabber Blue"
+            },
+            {
+               "id": "rapid_red",
+               "pret": 650,
+               "name": "Rapid Red"
+            }
+
+         ],
+         "wheels":[
+            {
+               "id": "default",
+               "pret": 0,
+               "name": "Roti 20\" Aluminium " 
+            }
+         ],
+         "interior":
+         {
+            "descriere": ["Scaune sport","Scaunele din fata incalzite","Scaun ajustabil electric"],
+            "optiuni":
+            [
+               {
+                  "id": "black",
+                  "pret": 0,
+                  "name": "Black Onyx"
+               }
+            ]  
+         },
+         "accesorii":[
+            { 
+               "id": "camera_fata",
+               "pret": 300,
+               "name": "Camera Fata"
+            },
+            {
+               "id":"camera_fata_spate",
+               "pret": 500,
+               "name": "Camera Fata si Spate"
+            },
+            {
+               "id":"vreme_rece",
+               "pret": 900,
+               "name": "Pachet vreme rece"
+            },
+            {
+               "id":"care",
+               "pret": 1500,
+               "name": "Audi Care"
+            }
+         ]
       }
 }
