@@ -228,7 +228,7 @@
       },
       "mach-e":
       {
-         "subtitle": "Cu Audi e-tron 55, eficienta electrica nu sacrifica performanta; motorul dublu produce 300kW de putere, propulsand acest SUV de la 0 la 100km/h in mai putin de 6 secunde",
+         "subtitle": " ",
 
          "mode_options": [
             {
@@ -323,14 +323,24 @@
                "name": "Camera Fata si Spate"
             },
             {
-               "id":"vreme_rece",
+               "id":"sync",
                "pret": 900,
-               "name": "Pachet vreme rece"
+               "name": "Next Gen SYNC"
             },
             {
-               "id":"care",
+               "id":"pilot",
                "pret": 1500,
-               "name": "Audi Care"
+               "name": "Ford Co-Pilot360"
+            },
+            {
+               "id":"pass",
+               "pret": 1500,
+               "name": "Ford Pass"
+            },
+            {
+               "id":"sunet",
+               "pret": 1500,
+               "name": "Sistem de sunet B&O"
             }
          ]
       }
