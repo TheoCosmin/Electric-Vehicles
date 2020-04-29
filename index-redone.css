@@ -12,61 +12,68 @@ body{
 }
 
 .slider{
-    height: calc(100vh - 50px);
-    background-color: grey;
-    position: relative;
+    overflow-x: hidden;
+    
+}
+.slider-container{
+    display: flex;;
+    width: 500vw;
 }
 .image-element{
-    display: none;
+    height: calc(100vh - 50px);
+    width: 110vw;
     color: white;
-}
-.image-element.image-active{
-    display: block;
+    position: relative;
 }
 
+
 .image-element:nth-child(1){
-    background: url(img/home/model-s-slider.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.image-element:nth-child(2){
-    background: url(img/home/e-tron-slider.png);
-    background-size: cover;
-    background-position: center;
-}
-.image-element:nth-child(3){
     background: url(img/home/mx-30-slider.jpg);
     background-size: cover;
     background-position: center;
 }
-.slider-arrows{
-    position: absolute;
-    height: 60px;
-    width: 100%;
-    top: calc(50vh - 30px);
+.image-element:nth-child(2){
+    background: url(img/home/model-s-slider.jpg);
+    background-size: cover;
+    background-position: center;
 }
-.slider-arrows a{
-    position: absolute;
+.image-element:nth-child(3){
+    background: url(img/home/e-tron-slider.png);
+    background-size: cover;
+    background-position: center;
+}
+.image-element:nth-child(4){
+    background: url(img/home/mx-30-slider.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.image-element:nth-child(5){
+    background: url(img/home/model-s-slider.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.arrow{
     width: 60px;
-    height: 100%;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
     opacity: 0.6;
     transition: 1s ease;
 }
-.slider-arrows a:hover{
+.arrow:hover{
     opacity: 1;
 }
-.slider-arrows a.arrow-right{
-    top:0;
-    right:7%;
-    background: url(img/home/arrow-right.png);
+.arrow-left{
+    left: 7%;
+    background: url(img/home/arrow-left.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
-.slider-arrows a.arrow-left{
-    top:0;
-    left: 7%;
-    background: url(img/home/arrow-left.png);
+.arrow-right{
+    right: 7%;
+    background: url(img/home/arrow-right.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -110,3 +117,8 @@ body{
 
 
 
+.something-else{
+    /* width: 100vh; */
+    height: 100vh;
+    background-color: green;
+}
