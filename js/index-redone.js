@@ -1,50 +1,4 @@
 
-
-
-// var numberOfSlides = $('.image-element').length;
-// var slider = $('.image-element')
-// var currentSlideIndex;
-
-
-// $(document).ready(function (){
-//     $('.ui-loader').remove();
-
-
-//     slider.on('swiperight',function(){
-        
-//         currentSlideIndex = $('.image-element.image-active').index()+1;
-//         console.log('current index',currentSlideIndex)
-//          fadeToNextSlide(currentSlideIndex,'right')
-         
-//     })
-//     slider.on('swipeleft',function(){
-        
-//         currentSlideIndex = $('.image-element.image-active').index()+1;
-//         console.log('current index',currentSlideIndex)
-//          fadeToNextSlide(currentSlideIndex,'left')
-         
-//     })
-    
-// })
-//  function getTheNextActiveSlide( currentSlide,swipeDirrection){
-//     if( currentSlide == numberOfSlides && swipeDirrection == 'right') return 1;
-//     if( currentSlide == 1  && swipeDirrection == 'left' ) return numberOfSlides;
-//     if( swipeDirrection == "right" ) return currentSlide + 1;
-//     else return currentSlide - 1;
-//  }
-
-
-//  function fadeToNextSlide(currentSlide, swipeDirrection){
-//     $('.image-element:nth-child('+currentSlide+')').fadeOut();
-//     $('.image-element:nth-child('+currentSlide+')').removeClass('image-active');
-//         var nextSlide = getTheNextActiveSlide(currentSlide,swipeDirrection)
-//         $('.image-element:nth-child('+nextSlide+')').fadeIn();
-//         $('.image-element:nth-child('+nextSlide+')').addClass('image-active');
-//         $('.image-element:nth-child('+nextSlide+')').css('display',"flex");
-
-//  }
-
-
 const sliderContainer = $('.slider-container');
 const slider = $('.slider');
 const sliderImages = $('.image-element')
@@ -65,17 +19,15 @@ $(document).ready(function(){
         sliderContainer.css('transform','translatex('+  (-width * counter)+'px)')
     })
 
-
-
     nextBtn.click(function(){
         if(counter >= sliderImages.length-1) return ;
-        sliderContainer.css('transition','0.4s ease-in-out')
+        sliderContainer.css('transition','1s ease-in-out')
         counter++;
         sliderContainer.css('transform','translatex('+  (-width * counter)+'px)')
      })
      prvBtn.click(function(){
         if(counter <= 0 )return;
-        sliderContainer.css('transition','0.4s ease-in-out')
+        sliderContainer.css('transition','1s ease-in-out')
         counter--;
         sliderContainer.css('transform','translatex('+  (`${-width * counter}`)+'px)')
      })
@@ -92,7 +44,10 @@ $(document).ready(function(){
             sliderContainer.css('transform','translatex('+  (`${-width * counter}`)+'px)')
          }
      })
+
+  
 })
+
 
 
 //script pt mobile gesture swipe-left/right
@@ -158,3 +113,50 @@ swiper.init(gestureZone, function(e) {
 })
 
 //end script
+
+
+const eTronOverlay = $('.e-tron-promo .overlay');
+const eTronButton = $('.e-tron-promo .button');
+
+eTronButton.hover(function(){
+    eTronOverlay.css('background-color','rgba(0, 0, 0, 0.8)');
+},function(){
+    eTronOverlay.css('background-color','rgba(0, 0, 0, 0)');
+})
+
+
+
+
+const dealsElements = $('.deal-element')
+var dealsElementWidth = dealsElements.width();
+var windowWidth = $(window).width();
+dealsElements.css('height',dealsElementWidth+'px')
+console.log(windowWidth)
+if(windowWidth < 1025){
+    dealsElements.children('.deal-overlay').css("opacity",1) 
+    dealsElements.children('.deal-overlay').css('background-color','rgba(0, 0, 0, 0.2)')
+}
+$(window).on('resize',function(){
+    dealsElementWidth = dealsElements.width();
+    dealsElements.css('height',dealsElementWidth+'px')
+    windowWidth = $(window).width();
+    if(windowWidth < 1025){
+            dealsElements.children('.deal-overlay').css("opacity",1) 
+            dealsElements.children('.deal-overlay').css('background-color','rgba(0, 0, 0, 0.4)')
+    }
+    else{
+        dealsElements.children('.deal-overlay').css("opacity",0)
+    }
+})
+
+dealsElements.hover(function(){
+    if(windowWidth > 1025){
+        $(this).children('.deal-overlay').css('opacity',1)
+        $(this).children('.deal-overlay').css('background-color','rgba(0, 0, 0, 0.8)')
+    }
+},function(){
+    if(windowWidth > 1025){
+        $(this).children('.deal-overlay').css('opacity',0)
+        $(this).children('.deal-overlay').css('background-color','rgba(0, 0, 0, 0)')
+    }
+})

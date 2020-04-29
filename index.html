@@ -1,215 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Electric Vehicles</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap" rel="stylesheet">
+    <title>Electric Vehicles</title>
     <link rel="stylesheet" href="nav-footer.css">
-    <link rel="stylesheet" href="Index.css">
+    <link rel="stylesheet" href="index-redone.css">
 </head>
-<body class="notransition">
-
+<body>
     <header>
         <div class="logo">
             <!-- <img src="Logo.png" alt=""> -->
-            <a href="index.html" class="logo-img"></a>
-            <a href="index.html">Electric Vehicles</a>
+            <a href="#" class="logo-img"></a>
+            <a href="#">Electric Vehicles</a>
         </div>
         <nav class="min">
             <ul>
-                <li><a href="index.html" class="active">ACASA</a></li>
-                <li><a href="modele.html">MODELE</a></li>
+                <li><a href="index.html" class="active" >ACASA</a></li>
+                <li><a href="modele.html" >MODELE</a></li>
                 <li><a href="">ELECTRIC VS TERMIC</a></li>
-                <li><a href="index_redone.html">ABONARE</a></li>
+                <li><a href="">ABONARE</a></li>
             </ul>
         </nav>
         <div class="menu-toggle"><em class="fas fa-bars"></em></div>
     </header>
 
-
-    
-    <section class="top-promo">
-        <div class="slider">
-            <div class="slide slide-one slide-active">
-                <div class="content">
-                    <h2>Noul</h2><h2 class="highlight">Model S.</h2>
-                    <p>Design reinterpretat</p>
-                    <a href="tesla_model_s.html">Descopera</a>
-                </div>
-            </div>
-            <div class="slide slide-two ">
-                <div class="content">
-                    <h2>Noul</h2><h2 class="highlight">e-tron.</h2>
-                    <p>Daţi formă viitorului</p>
-                    <a href="audi_e-tron.html">Descopera</a>
-                </div>
-            </div>
-            <div class="slide slide-three ">
+    <section class="slider">
+        <div class="slider-container">
+            <div class="image-element" id="lastClone">
                 <div class="content">
                     <h2>Noul</h2><h2 class="highlight">MX-30.</h2>
                     <p>Experienta electrica incepe acum</p>
-                    <a href="modele.html">Descopera</a>
+                    <a href="modele.html" class="button">Descopera</a>
+                </div>
+            </div>
+            <div class="image-element">
+                <div class="content">
+                    <h2>Noul</h2><h2 class="highlight">Model S.</h2>
+                    <p>Design reinterpretat</p>
+                    <a href="tesla_model_s.html" class="button">Descopera</a>
+                </div>
+            </div>
+            <div class="image-element">
+                <div class="content">
+                    <h2>Noul</h2><h2 class="highlight">e-tron.</h2>
+                    <p>Daţi formă viitorului</p>
+                    <a href="audi_e-tron.html" class="button">Descopera</a>
+                </div>
+            </div>
+            <div class="image-element">
+                <div class="content">
+                    <h2>Noul</h2><h2 class="highlight">MX-30.</h2>
+                    <p>Experienta electrica incepe acum</p>
+                    <a href="modele.html" class="button">Descopera</a>
+                </div>
+            </div>
+            <div class="image-element" id="firstClone">
+                <div class="content">
+                    <h2>Noul</h2><h2 class="highlight">Model S.</h2>
+                    <p>Design reinterpretat</p>
+                    <a href="tesla_model_s.html" class="button">Descopera</a>
                 </div>
             </div>
         </div>
-        <a  class="button-left"></a>
-        <a  class="button-right"></a>
-        <a class="current-slide one active"></a>
-        <a class="current-slide two"></a>
-        <a class="current-slide three"></a>
+        <a class="arrow-left arrow" id="prvBtn"></a>
+        <a class="arrow-right arrow"id="nextBtn"></a>
+        <!-- <button id="prvBtn">prev</button>
+        <button id="nextBtn">next</button> -->
     </section>
+
+
 
     <section class="de-ce">
-        <div class="content">
-            <h2>De ce electric?</h2>
-            <p>Datorita noilor tehonogii, industria vehiculelor electrice creste foarte repede. Acest lucru a dus la vehicule electrice care pot merge mai departe la fiecare incarcare, la un pret mai mic decat vehiculele cu combustibil traditional.</p>
-        </div>
+        <h2>De ce electric?</h2>
+        <p>Datorita noilor tehonogii, industria vehiculelor electrice creste foarte repede. Acest lucru a dus la vehicule electrice care pot merge mai departe la fiecare incarcare, la un pret mai mic decat vehiculele cu combustibil traditional.</p>
+
     </section>
 
-    <section class="images two-cl">
-        <div class="image-content two-col">
-            <div class="image-zone">
-                <a class="image-one-link notransition"></a>
+    <section class="motive flex" >
+        <div class="motiv-element half">
+            <div class="image-container">
+                <div class="image"></div>
             </div>
-            <div class="text-promo">
+            <div class="content">
                 <h3>Zero combustibil, zero emisii</h3>
 				<p>Motorul electric al unui astfel de autovehicul functioneaza ca un circuit inchis, asa ca masinile electrice nu emit niciun gaz care sa contribuie la poluarea globala</p>
             </div>
         </div>
-        <div class="image-content two-col">
-			<div class="image-zone">
-				<a  class="image-two-link notransition"></a>
-			</div>
-			<div class="text-promo">
-				<h3>Motor silentios</h3>
-				<p>Silentiozitatea motorului ofera un anumit confort atat pentru sofer, cat si pentru ceilalti participanti la trafic</p>
-			</div>
-		</div>
-    </section>
-
-    <section class="images three-cl">
-        <div class="image-content three-col">
-            <div class="image-zone">
-                <a class="image-three-link notransition"></a>
+        <div class="motiv-element half">
+            <div class="image-container">
+                <div class="image"></div>
             </div>
-            <div class="text-promo">
+            <div class="content">
+                <h3>Motor silentios</h3>
+				<p>Silentiozitatea motorului ofera un anumit confort atat pentru sofer, cat si pentru ceilalti participanti la trafic</p>
+            </div>
+        </div>
+        <div class="motiv-element third">
+            <div class="image-container">
+                <div class="image"></div>
+            </div>
+            <div class="content">
                 <h3>Costuri de intretinere mici</h3>
 				<p>Reviziile pentru masinile diesel si pe benzina sunt mai costisitoare in timp ce pentru vehiculele electrice nu</p>
             </div>
         </div>
-        <div class="image-content three-col">
-			<div class="image-zone">
-				<a  class="image-four-link notransition"></a>
-			</div>
-			<div class="text-promo">
-				<h3>Scuteste sume importante de bani</h3>
+        <div class="motiv-element third">
+            <div class="image-container">
+                <div class="image"></div>
+            </div>
+            <div class="content">
+                <h3>Scuteste sume importante de bani</h3>
 				<p>Pentru ca nu platesti pentru combustibil, vei economisi acei bani daca te hotarasti sa cumperi o masina electrica</p>
-			</div>
+            </div>
         </div>
-        <div class="image-content three-col">
-			<div class="image-zone">
-				<a  class="image-five-link notransition"></a>
-			</div>
-			<div class="text-promo">
-				<h3>Subventii</h3>
+        <div class="motiv-element third">
+            <div class="image-container">
+                <div class="image"></div>
+            </div>
+            <div class="content">
+                <h3>Subventii</h3>
 				<p>Guvernantii vor sa incurajeze achizitia de masini nepoluante si ii premiaza pe cei care investesc in aceste tipuri de autovehicule</p>
-			</div>
-		</div>
+            </div>
+        </div>
     </section>
 
-
-
-    <section class="audi-deal">
-        <video autoplay loop mute>
-            <source src="img/home/e-tron.mp4" type="video/mp4">
-        </video>
-        <div class="cover">
-        </div>
-        <div class="mobile-image">
-
-        </div>
-        <div class="content">
-            <h2>Audi <h2 class="electrified">e-tron</h2></h2>
+    <section class="e-tron-promo">
+        <video src="img/home/e-tron.mp4" autoplay loop muted></video>
+        <div class="overlay">
+            <div class="title"><h2>Audi <h2 class="electrified">e-tron</h2></h2></div>
             <h3>Cel dintai sportback Audi 100% electric.</h3>
             <p>Tractiune intregrala quattro, putere de pana la 408CP si autonomie de pana la 448 kilometri</p>
-            <a href="audi_e-tron.html">descopera</a>
-        </div>    
-    </section>
-
-    <!-- <hr> -->
-
-
-    <section class="deals three-cl">
-        <div class="deal three-col one">
-            <div class="deal-image deal-image-one"></div>
-            <div class="cover one"></div>
-            <div class="deal-content one mobile">
-                <div class="deal-text">
-                    <h4>Dacia electrica</h4>
-                    <a class="deal-button" href="modele.html">descopera</a>
-                </div>
-            </div>
+            <a href="audi_e-tron.html" class="button">descopera</a>
         </div>
-        <div class="deal three-col two">
-            <div class="deal-image deal-image-two"></div>
-            <div class="cover two"></div>
-            <div class="deal-content two mobile">
-                <div class="deal-text">
-                    <h4>Ford Mach-e</h4>
-                    <a class="deal-button" href="modele.html">descopera</a>
-                </div>
-            </div>
-        </div> 
-        <div class="deal three-col three">
-            <div class="deal-image deal-image-three"></div>
-            <div class="cover three" ></div>
-            <div class="deal-content three mobile">
-                <div class="deal-text">
-                    <h4>Hyundai Kona</h4>
-                    <a class="deal-button" href="modele.html">descopera</a>
-                </div>
-            </div>
-            <!-- <a class="deal-button" href="">descopera</a> -->
-        </div>
-
     </section>
 
 
+    <section class="deals">
+        <div class="deal-element third">
+            <div class="deal-overlay">
+                <h4>Dacia Spring</h4>
+                <a href="modele.html" class="button">descopera</a>
+            </div>
+        </div>
+        <div class="deal-element third">
+            <div class="deal-overlay">
+                <h4>Mustang Mach-e</h4>
+                <a href="modele.html" class="button">descopera</a>
+            </div>
+        </div>
+        <div class="deal-element third">
+            <div class="deal-overlay">
+                <h4>Hyundai Kona</h4>
+                <a href="modele.html" class="button">descopera</a>
+            </div>
+        </div>
+    </section>
 
-
-    <!-- <section class="footer">
-        <div class="follow-us-text four-col">
-            <p>Urmareste-ne</p>
-        </div>
-        <div class="social four-col">
-            <div class="icon fb">
-               <a href="https://facebook.com"></a>
-            </div>
-            <div class="icon linkedin">
-                <a href="https://linkedin.com"></a>
-             </div>
-             <div class="icon twitter">
-                <a href="https://twitter.com"></a>
-             </div>
-            <div class="icon g-plus">
-                <a href="https://google.com"></a>
-            </div>
-            <div class="icon insta">
-                <a href="https://instagram.com"></a>
-            </div>
-            <div class="icon youtube">
-                <a href="https://youtube.com"></a>
-            </div>
-        </div>
-        <div class="contact four-col">
-            <a href="">Informatii Legale</a>
-            <a href="">Termeni si Conditii</a>
-            <a href="">Contact</a>
-        </div>
-        <div class="copyright four-col">
-            <p>© 2020 Electric Vehicles</p>
-        </div>
-    </section> -->
 
     <section class="footer flex">
         <div class="left-side flex-el flex flex-col">
@@ -235,13 +182,11 @@
         </div>
     </section>
 
-    
+
+
     <script src="https://kit.fontawesome.com/133c9485b0.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="js/nav.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/audi-offer.js"></script>
-    <script src="js/bottom-deals.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/index-redone.js"></script>
 </body>
 </html>

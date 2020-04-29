@@ -547,6 +547,7 @@ hr{
     }
     .deal-content.mobile .deal-text a.deal-button{
         left: calc( (100vw/2) - 70px);
+        
     }
 
 

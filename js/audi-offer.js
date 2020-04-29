@@ -8,7 +8,6 @@ $(document).ready(function (){
             setTimeout(() => {
                 audi_cover.removeClass('hover-effect-reverse');
             }, 1200);
-
         }
         else{
             audi_cover.addClass('hover');

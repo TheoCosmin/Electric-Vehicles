@@ -13,7 +13,7 @@ body{
 
 .slider{
     overflow-x: hidden;
-    
+    position: relative;
 }
 .slider-container{
     display: flex;;
@@ -54,15 +54,34 @@ body{
 }
 .arrow{
     width: 60px;
+    width: 4.5vh;
     height: 60px;
+    height: 4.5vh;
     position: absolute;
     top: 50%;
     transform: translatey(-50%);
-    opacity: 0.6;
+    opacity: 0.8;
     transition: 1s ease;
 }
 .arrow:hover{
     opacity: 1;
+}
+.arrow-left:hover{
+    transform: translate(-5px, -50%);
+}
+@keyframes button-right-animation{
+    0%{}
+    7%{ transform: translate(5px,-50%);}
+    14%{ transform: translate(-8px,-50%);}
+    21%{ transform: translate(5px,-50%);}
+    28%{ transform: translate(-3px,-50%);}
+    35%{ transform: translate(1px,-50%);}
+    100%{}
+}
+.arrow-right{
+    animation: button-right-animation 7s infinite ease-in-out;
+    animation-delay: 3s;
+    animation-timing-function: ease-out;
 }
 .arrow-left{
     left: 7%;
@@ -93,32 +112,271 @@ body{
     font-weight: bold;
     margin-left: 7px;
 }
-.content p{
-    font-size: 2.5vh;
-}
+
 .image-element .content a{
     position: absolute;
-    color: black;
     margin-top: 15px; 
+}
+.button{
     padding: 10px 15px;
     background-color: white;
-    /* font-size: 1.1rem; */
     font-size: 2vh;
     text-decoration: none;
     text-transform: uppercase;
     opacity: 0.7;
     border-radius: 5px;
     transition: 1s ease;
+    color: black;
 }
-.image-element .content a:hover{
+.button:hover{
     opacity: 1;
 }
+.de-ce{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #13293D;
+    padding: 0 20vw;
+}
+.de-ce h2{
+    font-size: 5vh;
+    padding-bottom: 30px;
+    font-weight: normal;
+}
+.de-ce p{
+    font-size: 2.5vh;
+    text-align: justify;
+}
+
+.half{
+    flex: 50%;
+}
+.third{
+    flex: 33%;
+}
+.motive{
+    flex-wrap: wrap;
+}
+.motiv-element{
+    min-width: 500px;
+
+}
+.motiv-element .image{
+    height: 50vh;
+    max-height: 440px;
+    transition: 1.5s ease;
+}
+.motiv-element .image-container{
+    overflow: hidden;
+}
+.motiv-element .image:hover{
+    transform: scale(1.1);
+}
+.motiv-element:nth-child(1) .image{
+    background: url(img/home/charging2.jpg) center;
+    background-size: cover;
+}
+.motiv-element:nth-child(2) .image{
+    background: url(img/home/battery.jpg) ;
+    background-size: cover;
+    background-position: 50% 30%;
+
+}
+.motiv-element:nth-child(3) .image{
+    background: url(img/home/costuri-mici-r.jpg) bottom;
+    background-size: cover;
+}
+.motiv-element:nth-child(4) .image{
+    background: url(img/home/low-cost.jpg) center;
+    background-size: cover;
+}
+.motiv-element:nth-child(5) .image{
+    background: url(img/home/subventii.png) center;
+    background-size: cover;
+}
+.motive .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 40px;
+    color: #13293D
+}
+.motive .content h3{
+    margin-bottom: 30px;
+    font-size: 3vh;
+}
+.motive .content p{
+    font-size: 2vh;
+}
+
+.e-tron-promo{
+    
+    height: auto;
+    display: flex;
+    position: relative;
+}
+.e-tron-promo video{
+    flex: 1;
+    width: 100%;
+}
+.e-tron-promo .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease;
+    background-blend-mode: overlay;
+}
+.e-tron-promo .title{
+    margin-bottom: 50px;
+}
+.e-tron-promo h2{
+    display: inline;
+    font-size: 6vh;
+}
+.e-tron-promo h3{
+    font-size: 3vh;
+    text-align: center;
+}
+.e-tron-promo p{
+    font-size: 2vh;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.e-tron-promo .electrified{
+    text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #17BEBB,
+    0 0 80px #17BEBB,
+    0 0 90px #17BEBB,
+    0 0 100px #17BEBB,
+    0 0 150px #17BEBB;
+}
+.deals{
+    display: flex;
+    flex-wrap: wrap;
+}
+.deal-element{
+    min-width: 400px;
+    position: relative;
+}
+.deal-element:nth-child(1){
+    background: url(img/home/dacia-e.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.deal-element:nth-child(2){
+    background: url(img/home/mach-e.png);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.deal-element:nth-child(3){
+    background: url(img/home/kona.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.deal-element .deal-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: 1s ease;
+    background-blend-mode: overlay;
+}
+.deal-element .deal-overlay h4{
+    font-size: 3vh;
+    margin-bottom: 10px;
+}
 
 
 
 
-.something-else{
-    /* width: 100vh; */
-    height: 100vh;
-    background-color: green;
+
+@media(max-width: 1025px){
+    .image-element:nth-child(1){
+       
+        background-size: cover;
+        background-position: 85%;
+    }
+    .image-element:nth-child(3){
+        background: url(img/home/e-tron-slider.png);
+        background-size: cover;
+        background-position: 54% ;
+    }
+    .image-element:nth-child(4){
+        background: url(img/home/mx-30-slider.jpg);
+        background-size: cover;
+        background-position: 85%;
+    }
+    .de-ce{
+        padding: 0 10vw;
+    }
+    .e-tron-promo{
+        height: 75vh;
+    }
+    .e-tron-promo .overlay{
+        background: url(img/home/etron-6.jpg);
+        background-position: 30% 30%;
+        background-size: cover;
+        padding: 100px 10%;
+    }
+    .e-tron-promo .button{
+        margin-top: auto;
+    }
+}
+@media(max-width: 766px){
+    .arrow-left{
+        left: 2%
+    }
+    .arrow-right{
+        right: 2%;
+    }
+    .image-element:nth-child(3){
+        background: url(img/home/e-tron-slider.png);
+        background-size: cover;
+        background-position: 66% ;
+    }
+    .de-ce{
+        height: initial;
+        padding: 20vw 10vw;
+    }
+    .e-tron-promo{
+        height: 100vh;
+    }
+    .e-tron-promo .overlay{
+        padding: 50px 3%;
+    }
+    .e-tron-promo .overlay h3{
+        font-size: 2.2vh;
+    }
+    .e-tron-promo .overlay p{
+        font-size: 2vh;
+    }
+    
+}
+@media(max-width: 450px){
+    .motiv-element{
+        min-width: 300px;
+    
+    }
+    .deal-element{
+        min-width: 300px;
+    }
 }
