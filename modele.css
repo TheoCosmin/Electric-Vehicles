@@ -96,11 +96,11 @@
 @media(max-width:465px){
     .element{
         min-width: 320px;
+        height: auto;
+        padding: 20px 0;
     }
+   
     .image a.image-cover{
-        background-size: cover;
-    }
-    .element{
-        height: 45vh;
+        background-size: contain;
     }
 }

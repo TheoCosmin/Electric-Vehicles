@@ -1,0 +1,112 @@
+.flex{
+    display: flex;
+}
+.flex-one{
+    flex: 1;
+}
+.flex-col{
+    flex-direction: column;
+}
+body{
+    overflow-x: hidden;
+}
+
+.slider{
+    height: calc(100vh - 50px);
+    background-color: grey;
+    position: relative;
+}
+.image-element{
+    display: none;
+    color: white;
+}
+.image-element.image-active{
+    display: block;
+}
+
+.image-element:nth-child(1){
+    background: url(img/home/model-s-slider.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.image-element:nth-child(2){
+    background: url(img/home/e-tron-slider.png);
+    background-size: cover;
+    background-position: center;
+}
+.image-element:nth-child(3){
+    background: url(img/home/mx-30-slider.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.slider-arrows{
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    top: calc(50vh - 30px);
+}
+.slider-arrows a{
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    opacity: 0.6;
+    transition: 1s ease;
+}
+.slider-arrows a:hover{
+    opacity: 1;
+}
+.slider-arrows a.arrow-right{
+    top:0;
+    right:7%;
+    background: url(img/home/arrow-right.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.slider-arrows a.arrow-left{
+    top:0;
+    left: 7%;
+    background: url(img/home/arrow-left.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.image-element .content{
+    position: absolute;
+    top:75%;
+    left: 15%;
+}
+.content h2{
+    display: inline;
+    font-weight: 400;
+    font-size: 5vh;
+}
+.content h2.highlight{
+    font-weight: bold;
+    margin-left: 7px;
+}
+.content p{
+    font-size: 2.5vh;
+}
+.image-element .content a{
+    position: absolute;
+    color: black;
+    margin-top: 15px; 
+    padding: 10px 15px;
+    background-color: white;
+    /* font-size: 1.1rem; */
+    font-size: 2vh;
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: 0.7;
+    border-radius: 5px;
+    transition: 1s ease;
+}
+.image-element .content a:hover{
+    opacity: 1;
+}
+
+
+
+
