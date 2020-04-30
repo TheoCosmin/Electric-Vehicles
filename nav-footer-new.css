@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
+    /* overflow: hidden; */
+}
+
+body{
+    background:#EBEBEB;
+    min-width: 320px;
+    max-width: 100%;
+    width: 100%;
+    /* transform: translateX(100vw); */
+}
+
+.navbar{
+    /* -------------------USE THIS FOR FIXED NAV----------- */
+    /* width: 100vw;
+    position: fixed;
+    z-index: 20; */
+    /* ---------------------------------------------------- */
+    height: 50px;
+    background-color: #13293D;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.brand{
+    display:flex;
+    align-items: center;
+}
+
+.brand-logo{
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    background-image: url(img/home/Logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+.brand-name a{
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.nav-links{
+    height: 50px;
+}
+
+.nav-links ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.nav-links ul p{
+    display: none;
+}
+
+.nav-links li {
+    list-style: none;
+   
+}
+.nav-links li.active,.nav-links li:hover{
+    background-color: #17bebe;
+}
+
+.nav-links li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+    padding: 0 .7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links li:last-child{
+    margin-right: 0;
+}
+.toggle-button{
+    position: absolute;
+    top: 15px;
+    right: 10vw;
+    display: none;
+    
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.15s;
+    transform: rotate(0);
+}
+
+
+.sth{
+    height: 100vh;
+    background-color: grey;
+}
+
+
+.toggle-button.rotate .bar:nth-child(2){
+    display: none;
+}
+
+.toggle-button.rotate .bar:nth-child(1){
+   transform: translatey(8.5px) rotate(135deg);
+}
+
+.toggle-button.rotate .bar:nth-child(3){
+    transform: translateY(-8.5px) rotate(-135deg);
+}  
+
+@media(max-width: 888px){
+    .toggle-button{
+        display: flex;
+    }
+    .navbar{
+        padding: 0;
+        transition: .4s ease;
+    }
+    .brand{
+        margin-left: 10%;
+    }
+    .nav-links{
+        position: fixed;
+        height: auto; 
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        transition: .4s  ease-in-out;
+        transform: translateX(-100vw);
+        height: calc(100vh - 50px);
+        z-index: -1;
+    }
+    .nav-links.active{
+
+        opacity: 1;
+        display: initial;
+        transform: translateX(0);
+        z-index: 20;
+
+    }
+    .navbar.active{
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #EBEBEB;
+        transition: .4s ease;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    .navbar.active .brand-name a{
+        color: #13293D;
+        transition: .4s ease;
+    }
+    .navbar.active .toggle-button .bar{
+        background-color: #13293D;
+    }
+    .navbar .brand-name a{
+        transition: .4s ease;
+    }
+
+    
+    .nav-links ul{
+        background-color: #EBEBEB;
+        flex-direction: column;
+    }
+    .nav-links ul p{
+        display: initial;
+        text-align: center;
+        color: black;
+        opacity: 0.5;
+        margin-top: auto;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+        font-size: 2vh;
+    }
+    .nav-links ul li{
+        padding: 20px 0;     
+    }
+    .nav-links ul li a{
+        color: #13293D;
+        font-weight: 500;
+    }
+    .nav-links ul li:first-child{
+        margin-top: 20px;
+    }
+    .nav-links ul li a{
+        font-size: 2.7vh;
+    }
+    
+}
+
+
+
+/*----------------------- FOOTER --------------------*/
+
+
+.footer{
+    /* height: 15vh; */
+    padding: 15vh 3% 0 3%;
+    /* background-color: #13293D; */
+}
+.footer .container{
+
+    /* height: 13vh; */
+    /* margin: auto; */
+    /* border-top: 1px solid rgba(255, 255, 255, 0.3); */
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    /* background-color: lavenderblush; */
+    /* display: flex; */
+    flex-direction: column;
+}
+.footer .copyright{
+    /* flex: 33%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 30px 0 10px 0;
+}
+.footer .links{
+    width: auto;
+    /* flex: 66%; */
+    /* background-color: lightblue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer .useful-links a{
+    color: #13293D;
+    margin: 0 10px;
+}
+.footer .social-links{
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+.footer .social-links a{
+    width: 48px;
+    height: 48px;
+    background-color: red;
+    margin: 0 5px;
+}
+.footer .social-links a:nth-child(1){
+    background: url(img/home/facebook_icon64.png);
+    background-size: cover;
+    opacity: 0.8;
+}
+.footer .social-links a:nth-child(2){
+    background: url(img/home/twitter_icon64.png);
+    background-size: cover;
+    opacity: 0.8;
+}
+.footer .social-links a:nth-child(3){
+    background: url(img/home/linkedin_icon64.png);
+    background-size: cover;
+    opacity: 0.8;
+}
+.footer .social-links a:nth-child(4){
+    background: url(img/home/instagram_icon64.png);
+    background-size: cover;
+    opacity: 0.8;
+}
+
+@media(max-width: 835px){
+    .footer .links{
+        flex-direction: column-reverse
+    }
+    .footer .useful-links{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+    }
+    .footer .useful-links a{
+        text-align: center;
+    }
+    .footer .copyright{
+        margin-top: 10px;
+    }
+}

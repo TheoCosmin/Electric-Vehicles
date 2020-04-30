@@ -5,7 +5,7 @@
         <title>Audi e-tron</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="nav-footer.css">
+        <link rel="stylesheet" href="nav-footer-new.css">
         <!-- <link rel="stylesheet" href="audi_e-tron.css"> -->
         <link rel="stylesheet" href="car_presentation_template.css">
         <link rel="stylesheet" href="audi_e-tron.css">
@@ -13,22 +13,26 @@
     </head>
     <body>
         
-        <header id="header">
-            <div class="logo">
-                <!-- <img src="Logo.png" alt=""> -->
-                <a href="index.html" class="logo-img"></a>
-                <a href="index.html">Electric Vehicles</a>
+        <nav class="navbar ">
+            <div class="brand">
+                <div class="brand-logo"></div>
+                <div class="brand-name"><a href="index.html">Electric Vehicles</a></div>
             </div>
-            <nav class="min">
+            <a  class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="nav-links ">
                 <ul>
-                    <li><a href="index.html" >ACASA</a></li>
-                    <li><a href="modele.html" class="">MODELE</a></li>
-                    <li><a href="">ELECTRIC VS TERMIC</a></li>
-                    <li><a href="">ABONARE</a></li>
+                    <li class=""><a href="index.html">Acasa</a></li>
+                    <li><a href="modele.html">Modele</a></li>
+                    <li><a href="">Electric vs Termic</a></li>
+                    <li><a href="">Abonare</a></li>
+                    <p>Electric vehicles</p>
                 </ul>
-            </nav>
-            <div class="menu-toggle"><em class="fas fa-bars"></em></div>
-        </header>
+            </div>
+        </nav>
 
 
 
@@ -208,34 +212,31 @@
 
 
 
-        <section class="footer flex">
-            <div class="left-side flex-el flex flex-col">
-                <div class="link flex-el flex flex-col ">
-                    <a href="">Informatii Legale</a>
-                    <a href="">Termeni si Conditii</a>
-                    <a href="">Contact</a>
-                </div>
-                <div class="copyright">
-                    <p>© 2020 Electric Vehicles</p>
-                </div>
-            </div>
-            <div class="right-side flex-el flex">
-                <div class="social flex flex-col flex-el">
-                    <p>Urmareste-ne</p>
-                    <div class="icons flex">
-                        <a href="https://www.facebook.com"></a>
-                        <a href="https://www.linkedin.com"></a>
-                        <a href="https://www.twitter.com"></a>
-                        <a href="https://www.instagram.com"></a>
+        <footer class="footer">
+            <div class="container">
+                <div class="links">
+                    <div class="useful-links">
+                        <a href="">Informatii Legale</a>
+                        <a href="">Termeni si Conditii</a>
+                        <a href="">Contact</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://facebook.com"></a> 
+                        <a href="https://twitter.com"></a> 
+                        <a href="https://linkedin.com"></a> 
+                        <a href="https://instagram.com"></a> 
                     </div>
                 </div>
+                <div class="copyright">
+                    2020 Electric Vehicles
+                </div>
             </div>
-        </section>
+        </footer>
         
 
         <script src="https://kit.fontawesome.com/133c9485b0.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-        <script src="js/nav.js"></script>
+        <script src="js/nav-new.js"></script>
         <script src="js/car_presentation_template.js"></script>
         <script src="js/model-template.js"></script>
     </body>
