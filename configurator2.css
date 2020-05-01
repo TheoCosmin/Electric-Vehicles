@@ -1,40 +1,46 @@
-header{
-    background: transparent;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+.navbar .brand-name a{
+    color: #13293D
 }
-header .logo{
-    flex: initial;
+.navbar .toggle-button .bar{
+    background-color: #13293D;
 }
-header .logo a{
+.navbar{
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.navbar .nav-links ul li a{
     color: #13293D;
-}
-header nav{
-    display: flex;
-    margin-left: 100px;
-}
-header nav ul{
-    display: flex;
-    flex: 1;
-}
-header nav ul li{
-    flex: 1;
-    justify-content: center;
-}
-header nav ul li a{
-    color: #13293D;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: .9rem;
     padding: 0;
-    cursor: pointer;
 }
-header nav ul li a:hover,
-header nav ul li a.active{
-    background: transparent;
-    border-bottom: 4px #17BEBB solid;
+.nav-links{
+    flex: 1;
+    margin-left: 10px;
+    transition: none;
 }
-.menu-toggle{
-    color :#13293D
+.nav-links ul li{
+    flex: 1;
+}
+.nav-links li.active,.nav-links li:hover{
+    background-color: transparent;
+    border-bottom: 3px solid #17BEBB;
+}
+@media(max-width: 888px){
+    .nav-links{
+        margin: 0;
+        
+    }
+    .nav-links ul li{
+        flex: 0;
+    }
+    .navbar .nav-links ul li a{
+        padding: 20px 0;
+    }
+    .nav-links li.active,.nav-links li:hover{
+        background-color: #17BEBB;
+        border-bottom: 0;
+    }
 }
 
 

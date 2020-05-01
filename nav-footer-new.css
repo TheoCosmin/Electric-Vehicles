@@ -187,7 +187,7 @@ body{
         flex-direction: column;
     }
     .nav-links ul p{
-        display: initial;
+        
         text-align: center;
         color: black;
         opacity: 0.5;
@@ -196,12 +196,16 @@ body{
         text-transform: capitalize;
         font-size: 2vh;
     }
+    .navbar.active .nav-links ul p{
+        display: initial;
+    }
     .nav-links ul li{
-        padding: 20px 0;     
+        /* padding: 20px 0;      */
     }
     .nav-links ul li a{
         color: #13293D;
         font-weight: 500;
+        padding: 20px 0;   
     }
     .nav-links ul li:first-child{
         margin-top: 20px;

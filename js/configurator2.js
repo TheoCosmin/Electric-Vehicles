@@ -41,6 +41,8 @@ var price = 0;
 
 
 
+
+
 function getUrlVars()
 {
     var vars = {};
@@ -55,10 +57,19 @@ function getUrlVars()
 
 model = getUrlVars()['model'];
 function changeTabs(){
-    $('header nav ul li a').click(function(){
+    $('nav .nav-links ul li a').click(function(){
+        
+        //if we're in mobile view, close the menu -> tab change animations
+        var width = $(window).width()
+            if( width < 888 ){   
+                $('.navbar').toggleClass('active')
+                $('.nav-links').toggleClass('active ')
+                $('.toggle-button').toggleClass('rotate')
+            }
+
         //get the index of which element we've clicked on
         var index = $(this).parent().index();
-        //stop stop showing old tab
+        //stop showing old tab
         $(currentSlide).fadeOut();
         //start displaying the new tab that we have clicked on
         setTimeout(() => {
@@ -68,11 +79,11 @@ function changeTabs(){
                     currentSlide = "#"+page;
                     $(currentSlide).fadeIn();
                     $(currentSlide).css('display','flex');
-                    $(this).addClass('active');
+                    $(this).parent('li').addClass('active');
                 }
                 else{
                     var toRemoveClass = i+1
-                    $('header nav ul li:nth-child('+toRemoveClass+') a').removeClass('active');
+                    $('nav .nav-links ul li:nth-child('+toRemoveClass+') ').removeClass('active');
                 }
             }
            }, 500);
@@ -90,11 +101,11 @@ function mobileChangeTabs(){
             for(i  = 1; i <=numberOfPages; i++){
                 var toChange = parseInt(index[1])+1;
                 if ( i == toChange ){
-                   $('header nav ul li:nth-child('+i+') a').addClass('active')
+                   $('nav .nav-links ul li:nth-child('+i+') ').addClass('active')
                 }
                 else{
                   
-                    $('header nav ul li:nth-child('+i+') a').removeClass('active')
+                    $('nav .nav-links ul li:nth-child('+i+') ').removeClass('active')
                 }
             }
         }, 500);
