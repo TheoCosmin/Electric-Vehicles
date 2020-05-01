@@ -131,10 +131,11 @@ const dealsElements = $('.deal-element')
 var dealsElementWidth = dealsElements.width();
 var windowWidth = $(window).width();
 dealsElements.css('height',dealsElementWidth+'px')
-console.log(windowWidth)
+// console.log(windowWidth)
 if(windowWidth < 1025){
     dealsElements.children('.deal-overlay').css("opacity",1) 
     dealsElements.children('.deal-overlay').css('background-color','rgba(0, 0, 0, 0.2)')
+    $('.e-tron-promo video').trigger('pause');
 }
 $(window).on('resize',function(){
     dealsElementWidth = dealsElements.width();
@@ -143,9 +144,11 @@ $(window).on('resize',function(){
     if(windowWidth < 1025){
             dealsElements.children('.deal-overlay').css("opacity",1) 
             dealsElements.children('.deal-overlay').css('background-color','rgba(0, 0, 0, 0.4)')
-    }
+            $('.e-tron-promo video').trigger('pause');
+        }
     else{
         dealsElements.children('.deal-overlay').css("opacity",0)
+        $('.e-tron-promo video').trigger('play');
     }
 })
 
