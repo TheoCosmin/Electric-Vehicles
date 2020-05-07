@@ -1,0 +1,64 @@
+.navbar{
+    background: transparent;
+    position: absolute;
+    width: 100%;
+}
+.brand a{
+    color: #13293d;
+}
+.nav-links li a{
+    color: #13293d;
+}
+.toggle-button .bar{
+    background-color: #13293d;
+}
+footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.footer .container{
+    /* border-top: 1px solid rgba(255, 255, 255, 0.5); */
+    border-top: none;
+}
+.footer .copyright{
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 0;
+}
+.footer .useful-links a{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+.newsletter{
+    height: 100vh;
+    background: url(img/newsletter/newsletter-cover.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+@media(max-width: 1025px) and (min-width: 768px){
+
+    .newsletter{
+        background-position: 35% 50%;
+    }
+}
+
+
+
+
+@media(max-width: 766px){
+    .newsletter{
+ /* height: 150vh; */
+    }
+    .footer{
+        /* bottom: -50vh; */
+    }
+    .newsletter{
+        background-position: 35% 50%;
+    }
+
+}

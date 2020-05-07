@@ -1,0 +1,148 @@
+.navbar{
+    background: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.brand a{
+    color: #13293d;
+}
+.nav-links li a{
+    color: #13293d;
+}
+.toggle-button .bar{
+    background-color: #13293d;
+}
+.contact-page{
+    height: calc(100vh - 50px);
+    display: flex;
+}
+.contact-left{
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 10%;
+    text-align: center;
+}
+.contact-image{
+    height: 287px;
+    background: url(img/contact/contact.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.contact-left h1{
+    font-size: 5vh;
+    color: #13293d;
+    font-weight: normal;
+}
+.contact-right{
+    flex: 70%;
+    min-width: 70%;
+    background-color: #d0d0d0;
+    padding: 20vh 10vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+form{
+    flex: 1;
+    display: flex;
+}
+.form-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    margin-right: 20px;
+}
+.form-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    margin-left: 20px;
+}
+.input-element{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+.form-left .input-element:last-child,
+.form-right .input-element:last-child{
+    margin-bottom: 0;
+}
+
+.contact-right button{
+    position: absolute;
+    top: 80%;
+    align-self: center;
+    height: 50px;
+    min-height: 50px;
+    width: 180px;
+    border-radius: 25px;
+    color: white;
+    outline: none;
+    border: 0;
+    background-color: #17bebb;
+    margin: 15px 0 0 0;
+
+    /* margin-top: auto; */
+}
+input,select{
+    background-color: #ebebeb;
+    border-radius: 20px;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    margin-top: 5px;
+}
+option{
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+}
+textarea{
+    margin-top: 5px;
+    background-color: #ebebeb;
+    border: none;
+    border-radius: 20px;
+    resize: none;
+    height: 300px;
+    padding: 10px 20px;
+}
+option{
+    background-color: #ebebeb;
+
+}
+
+
+@media(max-width: 1400px){
+    .contact-page{
+        flex-direction: column;
+    }
+    .contact-left h1{
+        margin: 50px 0;
+    }
+    .contact-left{
+        padding: 0;
+        padding-top: 30px;
+    }
+    .contact-right{
+        padding: 50px 10vw 150px 10vw;
+    }
+    form{
+        flex-direction: column;
+    }
+    .form-right,.form-left{
+        margin: 0;
+    }
+    .input-element{
+        margin: 15px 0;
+    }
+    .contact-right button{
+        top: 90%;
+
+    }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="nav-footer-new.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <nav class="navbar ">
+        <div class="brand">
+            <div class="brand-logo"></div>
+            <div class="brand-name"><a href="index.html">Electric Vehicles</a></div>
+        </div>
+        <a  class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="nav-links ">
+            <ul>
+                <li class="active"><a href="index.html">Acasa</a></li>
+                <li><a href="modele.html">Modele</a></li>
+                <li><a href="">Electric vs Termic</a></li>
+                <li><a href="">Abonare</a></li>
+                <p>Electric vehicles</p>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <section class="contact-page">
+        <div class="contact-left">
+            <div class="contact-image">
+                <!-- <img src="img/contact/contact.svg" alt=""> -->
+            </div>
+            <h1>Contact</h1>
+        </div>
+        <div class="contact-right">
+            <form action="">
+                <div class="form-left">
+                    <div class="input-element">
+                        <label for="first_name">Prenumele</label>
+                        <input type="text" name="first_name" id="first_name" autocomplete="off">
+                    </div>
+                    <div class="input-element">
+                        <label for="last_name">Numele</label>
+                        <input type="text" name="last_name" id="last_name" autocomplete="off">
+                    </div>
+                    <div class="input-element">
+                        <label for="email">Adresa E-mail</label>
+                        <input type="email" name="email" id="email" autocomplete="off">
+                    </div>
+                    <div class="input-element">
+                        <label for="phone">Telefon</label>
+                        <input type="tel" name="phone" id="phone" autocomplete="off">
+                    </div>
+                    <div class="input-element">
+                        <label for="contact_method">Metoda de Contact</label>
+                        <select name="contact_method" id="contact_method">
+                            <option value="phone">Telefon</option>
+                            <option value="email">E-mail</option>
+                        </select>
+                    </div>
+                    <div class="input-element">
+                        <label for="region">Regiune</label>
+                        <input type="text" name="region" id="region" autocomplete="off">
+                    </div>
+
+
+                </div>
+                <div class="form-right">
+                    <div class="input-element">
+                        <label for="subject">Subiect</label>
+                        <input type="text" name="subject" id="subject">
+                    </div>
+                    <div class="input-element">
+                        <label for="question">Intrebare</label>
+                        <textarea name="question" id="question" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                
+            </form>
+            <button>Trimite</button>
+        </div>
+    </section>
+
+
+
+
+    <script src="https://kit.fontawesome.com/133c9485b0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/nav-new.js"></script>
+</body>
+</html>
