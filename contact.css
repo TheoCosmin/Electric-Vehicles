@@ -39,13 +39,15 @@
     flex: 70%;
     min-width: 70%;
     background-color: #d0d0d0;
-    padding: 20vh 10vw;
+    /* padding: 20vh 10vw; */
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 form{
-    flex: 1;
+    /* flex: 1; */
     display: flex;
 }
 .form-left{
@@ -73,7 +75,7 @@ form{
 }
 
 .contact-right button{
-    position: absolute;
+    /* position: absolute; */
     top: 80%;
     align-self: center;
     height: 50px;
@@ -96,6 +98,7 @@ input,select{
     outline: none;
     padding: 0 20px;
     margin-top: 5px;
+    min-width: 400px;
 }
 option{
     height: 40px;
