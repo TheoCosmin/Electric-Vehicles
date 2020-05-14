@@ -538,7 +538,7 @@ input{
 
 
 @media (orientation: landscape)
-and (max-height: 500px){
+and (max-height: 667px){
     .preview{
         min-height: 250px;
         margin-bottom: 30px;

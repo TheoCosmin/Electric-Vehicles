@@ -386,7 +386,7 @@ h2.bold{
 
 
 @media (orientation: landscape)
-and (max-height: 500px){
+and (max-height: 667px){
     .background{
         background: url(img/tesla_model_s/model-s2.jpg);
         background-position: center;

@@ -108,7 +108,7 @@
 
 
 @media (orientation: landscape)
-and (max-height: 500px) {
+and (max-height: 667px) {
     .element{
         height: initial;
         min-height: 250px;
