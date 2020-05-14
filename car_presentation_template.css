@@ -103,7 +103,6 @@ h2.bold{
 }
 .content{
     display: flex;
-    /* not sure about this */
     padding: 0 20%;
     align-items: center;
 }
@@ -183,7 +182,6 @@ h2.bold{
 }
 .specs .right-side{
     flex:1;
-    /* background-color: darkgray; */
     align-items: center;
     justify-content: center;
     padding: 50px 0;
@@ -220,7 +218,6 @@ h2.bold{
     flex: 50%;
     justify-content: space-between;
     align-items: flex-end;
-    /* align-items: center; */
     color: white;
 }
 .right-column{
@@ -228,13 +225,8 @@ h2.bold{
     flex: 50%;
     justify-content: space-between;
     align-items: flex-start;
-    /* align-items: center; */
     color: white;
 }
-
-/* .footer {
-    background-color: black;
-} */
 
 
 

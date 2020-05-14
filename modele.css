@@ -42,7 +42,6 @@
     align-items: flex-end;
 }
 .element .image a{
-    /* min-width: 465px; */
     width: 465px;
     height: 185px;
 }

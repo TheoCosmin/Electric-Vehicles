@@ -201,9 +201,6 @@ body{
     .navbar.active .nav-links ul p{
         display: initial;
     }
-    .nav-links ul li{
-        /* padding: 20px 0;      */
-    }
     .nav-links ul li a{
         color: #13293D;
         font-weight: 500;
@@ -224,23 +221,14 @@ body{
 
 
 .footer{
-    /* height: 15vh; */
     padding: 15vh 3% 0 3%;
-    /* background-color: #13293D; */
 }
 .footer .container{
-
-    /* height: 13vh; */
-    /* margin: auto; */
-    /* border-top: 1px solid rgba(255, 255, 255, 0.3); */
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 20px;
-    /* background-color: lavenderblush; */
-    /* display: flex; */
     flex-direction: column;
 }
 .footer .copyright{
-    /* flex: 33%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,8 +237,6 @@ body{
 }
 .footer .links{
     width: auto;
-    /* flex: 66%; */
-    /* background-color: lightblue; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -299,7 +285,6 @@ body{
         margin-top: 20px;
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
     }
     .footer .useful-links a{
         text-align: center;

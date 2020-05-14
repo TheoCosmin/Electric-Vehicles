@@ -71,7 +71,6 @@
     position: absolute;
     top: 5%;
     left: -20%;
-    /* z-index: 0; */
     animation: lines-animation 15s forwards infinite;
 }
 

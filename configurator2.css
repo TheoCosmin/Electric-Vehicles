@@ -87,7 +87,6 @@
     max-height: 100vh;
     min-width: 425px;
     justify-content: center;
-    /* margin-bottom: 130px; */
 }
 .selection .price{
     justify-content: center;
@@ -120,16 +119,13 @@
 }
 #model .element{
     align-items: center;
-    /* padding: 0 2vw; */
     flex: 1;
 }
 #model .overlay h2{
-    /* font-size : 42px; */
     font-size: 2vw;
     font-weight: normal;
 }
 #model .overlay p{
-    /* font-size : 14; */
     font-size: .8vw;
     font-weight: normal;
     min-width: 95px;
@@ -139,7 +135,6 @@
 
 .selection h2{
     font-size: 28px;
-    /* font-size: 1vw; */
     font-weight: normal;
     margin: 15px 0;
 }
@@ -149,7 +144,6 @@
 .selection p{
     font-size: 17px;
     text-align: justify;
-    /* margin: 20px 0; */
 }
 .selection .optiune{
     margin: 5px 0;
@@ -351,7 +345,6 @@ input{
 }
 
 #success{
-    /* background: grey; */
     height: 100vh;
 }
 .success_content{
@@ -533,9 +526,7 @@ input{
      .success_content h3{
          font-size: 11px;
      }
-
 }
-
 
 @media (orientation: landscape)
 and (max-height: 667px){
