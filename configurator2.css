@@ -535,3 +535,21 @@ input{
      }
 
 }
+
+
+@media (orientation: landscape)
+and (max-height: 500px){
+    .preview{
+        min-height: 250px;
+        margin-bottom: 30px;
+    }
+    .selection{
+        padding: 20px 50px;
+        padding-bottom: 180px;
+        max-height: initial;
+    }
+    .price{
+        margin: 0 5%;
+        width:  calc(100% - 10%);
+    }
+}

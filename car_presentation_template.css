@@ -383,3 +383,56 @@ h2.bold{
         align-items: center;
     }
 }
+
+
+@media (orientation: landscape)
+and (max-height: 500px){
+    .background{
+        background: url(img/tesla_model_s/model-s2.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    .button{
+        font-size: 1rem;
+        width: 150px;
+        height: 35px;
+    }
+    .fullheight{
+        height: initial;
+    }
+    .upper{
+        min-height: 75vh
+    }
+    .overlay, .upper.interior .overlay{
+        padding: 10px 5%;
+    }
+    .content{
+        padding: 24px;
+        flex-direction: column;
+        align-items: initial;
+    }
+    .button.to-hide{
+        display: none;
+    }
+    .button.mobile{
+        display: flex;
+        align-self: center;
+    }
+    .content-description{
+        padding: 15px 0;
+    }
+    .content-description p{
+        padding-left: 0;
+    }
+    .banner-header h2{
+        line-height: 15px;
+        font-size: 15px;
+    }
+    .banner-subheader h1{
+        line-height: 23px;
+        font-size: 23px;
+    }
+}

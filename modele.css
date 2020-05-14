@@ -104,3 +104,13 @@
         background-size: contain;
     }
 }
+
+
+
+@media (orientation: landscape)
+and (max-height: 500px) {
+    .element{
+        height: initial;
+        min-height: 250px;
+    }
+}

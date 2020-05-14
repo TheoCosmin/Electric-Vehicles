@@ -85,3 +85,20 @@
         top:90%;
     }
 }
+
+@media (orientation: landscape)
+and (max-height: 500px){
+    .background{
+        background: url(img/ford_mach-e/white_model.png);
+        background-size: cover;
+        background-position: left;
+    }
+    .upper{
+        background: url(img/ford_mach-e/show.png);
+        background-size: cover;
+        background-position: center bottom;
+    }
+    .button-zone-center{
+        top: 85%;
+    }
+}

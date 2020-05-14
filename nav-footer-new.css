@@ -308,3 +308,13 @@ body{
         margin-top: 10px;
     }
 }
+
+@media( orientation: landscape)
+and (max-height: 500px) {
+    .nav-links ul li a{
+        font-size: 2.7vw;
+    }
+    .nav-links ul p{
+        font-size: initial;
+    }
+}

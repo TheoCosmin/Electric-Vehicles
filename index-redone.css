@@ -103,6 +103,7 @@ body{
     top:75%;
     left: 15%;
 }
+
 .content h2{
     display: inline;
     font-weight: 400;
@@ -128,6 +129,7 @@ body{
     transition: 1s ease;
     color: black;
 }
+
 .button:hover{
     opacity: 1;
 }
@@ -379,5 +381,50 @@ body{
     }
     .deal-element{
         min-width: 300px;
+    }
+}
+
+
+@media (orientation: landscape)
+and (max-height: 500px) {
+    .button{
+        font-size: 12px;
+    }
+    .image-element .content{
+        top: 60%;
+    }  
+    .de-ce{
+        height: initial;
+        padding: 50px;
+    }
+    .de-ce h2{
+        font-size: 5vw;
+    }
+    .de-ce p{
+        font-size: 2.5vw;
+    }
+    .motive .content p{
+        font-size: 2vw;
+    }
+    .motive .content h3{
+        font-size: 3vw;
+    }
+    .motive .image{
+        min-height: 75vh;
+    }
+    .e-tron-promo h2{
+        font-size: 5vw;;
+    }
+    .e-tron-promo .overlay h3{
+        font-size: 2.2vw;
+    }
+    .e-tron-promo .overlay p{
+        font-size: 2vw;
+    }
+    .e-tron-promo{
+        height: 100vh;
+    }
+    .deal-element .deal-overlay h4{
+        font-size: 4vw;
     }
 }
